@@ -1,0 +1,12 @@
+.custom-zoom [data-rmiz-modal-overlay="hidden"] {
+	background-color: rgba(0, 0, 0, 0);
+}
+.custom-zoom [data-rmiz-modal-overlay="visible"] {
+	background-color: rgba(0, 0, 0, 0.459);
+}
+.custom-zoom [data-rmiz-btn-unzoom] {
+	display: none;
+}
+.custom-zoom [data-rmiz-btn-unzoom]:focus-visible {
+	display: none;
+}

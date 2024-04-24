@@ -1,0 +1,8 @@
+{
+	"heroMessagesSafe": ["Safe message 1", "Safe message 2", "Safe message 3"],
+	"heroMessagesShowOnlyForGroupMembers": [
+		"Group member message 1",
+		"Group member message 2",
+		"Group member message 3"
+	]
+}
