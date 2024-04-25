@@ -6,7 +6,6 @@ import anonImg from "../assets/anonImg.jpg";
 const WhoStartButton = (props) => {
 	const { getItem } = useLocalStorage();
 	const token = getItem("WST", "token");
-	console.log(props.auth);
 
 	// Show login button if user is not logged in
 	if (props.user?.data?.user === null || !token) {
@@ -73,7 +72,7 @@ const WhoStartButton = (props) => {
 				</p>
 			</button>
 			{props.user?.data?.user && (
-				<div className="flex items-center justify-between gap-2 mt-2 w-full px-1">
+				<div className="flex items-center justify-between gap-2 mt-2 w-full p-1 bg-[#2F80ED40] rounded-md">
 					{/* bg-blackishLight p-2 rounded-xl */}
 					<span className="flex items-center justify-center gap-2">
 						<img

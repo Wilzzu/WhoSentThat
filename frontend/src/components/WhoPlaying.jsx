@@ -4,10 +4,10 @@ import QuestionCard from "./QuestionCard";
 import { AnimatePresence, motion } from "framer-motion";
 import PreviousMessage from "./PreviousMessage";
 import PowerupButton from "./PowerupButton";
-import ChatBubbles from "../../assets/ChatBubbles";
-import FiftyFifty from "../../assets/FiftyFifty";
+import ChatBubbles from "../assets/ChatBubbles";
+import FiftyFifty from "../assets/FiftyFifty";
 import PointsUI from "./PointsUI";
-import LoadingSpinner from "../../assets/LoadingSpinner";
+import LoadingSpinner from "../assets/LoadingSpinner";
 
 const WhoPlaying = (props) => {
 	// UI

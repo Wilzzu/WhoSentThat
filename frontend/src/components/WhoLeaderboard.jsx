@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import WhoLeaderboardItem from "./WhoLeaderboardItem";
-import LoadingSpinner from "../../assets/LoadingSpinner";
+import LoadingSpinner from "../assets/LoadingSpinner";
 import { useReward } from "react-rewards";
 
 const WhoLeaderboard = (props) => {

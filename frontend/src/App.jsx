@@ -9,6 +9,8 @@ import supabase from "./utils/supabase";
 import { useQueryClient } from "react-query";
 import useLocalStorage from "./hooks/useLocalStorage";
 import useAuthenticate from "./hooks/useAuthenticate";
+import useGetQuestion from "./hooks/useGetQuestion";
+import WhoPlaying from "./components/WhoPlaying";
 
 const user = await supabase.auth.getUser();
 
@@ -64,23 +66,20 @@ const App = () => {
 	};
 
 	// Fetching question and auth
-	// const { questionData, questionLoading, questionIsError, refetchQuestion, questionReset } =
-	// 	useGetQuestion(token);
+	const { questionData, questionLoading, questionIsError, refetchQuestion, questionReset } =
+		useGetQuestion(token);
 	const [questions, setQuestions] = useState(null);
 
-	// Getting user data
-	console.log(user);
-
 	// Add new question to the question array
-	// useEffect(() => {
-	// 	if (!questionData) return;
-	// 	if (!questions) setQuestions([questionData]);
-	// 	else setQuestions((prev) => [...prev, questionData]);
-	// }, [questionData]);
+	useEffect(() => {
+		if (!questionData) return;
+		if (!questions) setQuestions([questionData]);
+		else setQuestions((prev) => [...prev, questionData]);
+	}, [questionData]);
 
-	// useEffect(() => {
-	// 	if (questions && questions.length < 3) refetchQuestion();
-	// }, [questions]);
+	useEffect(() => {
+		if (questions && questions.length < 3) refetchQuestion();
+	}, [questions]);
 
 	const nextQuestion = () => {
 		setQuestions((prev) => [...prev.slice(1)]);
@@ -113,16 +112,16 @@ const App = () => {
 					/>
 				)}
 				{/* Gameplay scene */}
-				{/*{scene === "playing" && (
+				{scene === "playing" && (
 					<WhoPlaying
 						data={questions}
-						// loading={questionLoading}
-						// error={questionIsError}
+						loading={questionLoading}
+						error={questionIsError}
 						setScene={setScene}
-						// refetchQuestion={refetchQuestion}
+						refetchQuestion={refetchQuestion}
 						setFinalScore={setFinalScore}
 						nextQuestion={nextQuestion}
-						// questionReset={questionReset}
+						questionReset={questionReset}
 						setPageExits={setPageExits}
 						setCorrectAnswers={setCorrectAnswers}
 						highestStreak={highestStreak}
@@ -130,7 +129,7 @@ const App = () => {
 						setQuestionTimes={setQuestionTimes}
 						setStartTime={setStartTime}
 					/>
-				)}*/}
+				)}
 				{/* End scene */}
 				{/*{scene === "end" && (
 					<WhoEnd

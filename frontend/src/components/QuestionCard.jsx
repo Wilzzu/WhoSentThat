@@ -1,12 +1,12 @@
 /* eslint-disable react/display-name */
 import Linkify from "react-linkify";
-import anonImg from "../../assets/anonImg.jpg";
+import anonImg from "../assets/anonImg.jpg";
 import { motion } from "framer-motion";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import "./zoom.css";
 import { useState } from "react";
-import LoadingSpinner from "../../assets/LoadingSpinner";
+import LoadingSpinner from "../assets/LoadingSpinner";
 import { forwardRef } from "react";
 
 const colors = {

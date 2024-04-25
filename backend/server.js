@@ -7,6 +7,7 @@ const port = process.env.PORT || 5000;
 
 // const connectDB = require("./config/db");
 const getAuthenticate = require("./controllers/getAuthenticate");
+const getQuestion = require("./controllers/getQuestion");
 
 const app = express();
 // connectDB();
@@ -28,7 +29,7 @@ app.use(function (req, res, next) {
 
 // API endpoints
 app.get("/api/authenticate", getAuthenticate);
-// app.get("/api/new", getQuestion);
+app.get("/api/new", getQuestion);
 // app.post("/api/addScore", setWhoScore);
 // app.get("/api/scoreboard", getWhoScoreboard);
 

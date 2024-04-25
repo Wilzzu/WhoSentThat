@@ -1,0 +1,252 @@
+{
+	"guild": {
+		"id": "guildid",
+		"name": "guildname",
+		"iconUrl": "guildiconurl"
+	},
+	"channel": {
+		"id": "channelid",
+		"type": "channeltype",
+		"categoryId": "channelcategoryid",
+		"category": "channelcategory",
+		"name": "channelname",
+		"topic": null
+	},
+	"dateRange": {
+		"after": null,
+		"before": null
+	},
+	"messages": [
+		{
+			"id": "40",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:00:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Hey everyone! Let's talk about our favorite hobbies outside of work or school. What do you enjoy doing in your free time?",
+			"author": {
+				"id": "0",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "41",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:02:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "In my free time, I love playing the guitar. It's a great way to relax and express myself creatively.",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "42",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:05:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I enjoy hiking in nature whenever I can. It's refreshing and helps me clear my mind.",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "43",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:08:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "For me, it's cooking! Trying out new recipes and experimenting with flavors is both fun and rewarding.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "44",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:10:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "In my free time, I enjoy photography. Capturing moments and exploring different perspectives is truly fulfilling.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "45",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:12:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I love reading! Curling up with a good book is my favorite way to unwind after a long day.",
+			"author": {
+				"id": "0",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "46",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:15:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Reading is a wonderful hobby, Alex! It's a great way to escape into different worlds.",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "47",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:18:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Absolutely! It's amazing how a good book can transport you to different places and times.",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "48",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:20:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Indeed, Emily! It's like going on an adventure without leaving your home.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "49",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:22:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Absolutely! And the best part is, you can go on as many adventures as you want, without ever running out of books.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		}
+	],
+	"messageCount": 10
+}

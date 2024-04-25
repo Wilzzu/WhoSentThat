@@ -5,7 +5,7 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import "./zoom.css";
 import { useState } from "react";
-import LoadingSpinner from "../../assets/LoadingSpinner";
+import LoadingSpinner from "../assets/LoadingSpinner";
 import { forwardRef } from "react";
 
 const PreviousMessage = forwardRef((props, ref) => {

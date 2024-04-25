@@ -1,0 +1,252 @@
+{
+	"guild": {
+		"id": "guildid",
+		"name": "guildname",
+		"iconUrl": "guildiconurl"
+	},
+	"channel": {
+		"id": "channelid",
+		"type": "channeltype",
+		"categoryId": "channelcategoryid",
+		"category": "channelcategory",
+		"name": "channelname",
+		"topic": null
+	},
+	"dateRange": {
+		"after": null,
+		"before": null
+	},
+	"messages": [
+		{
+			"id": "30",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:25:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Let's switch gears a bit. What's your favorite travel destination you've been to?",
+			"author": {
+				"id": "0",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "31",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:28:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "My favorite travel destination has to be Kyoto, Japan. The blend of history, culture, and natural beauty is breathtaking.",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "32",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:30:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Mine would have to be Santorini, Greece. The stunning views and charming villages left a lasting impression.",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "33",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:32:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "My favorite travel destination has to be Machu Picchu in Peru. The ancient ruins and the breathtaking landscape are unlike anything else.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "34",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:35:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "For me, it's the Amalfi Coast in Italy. The picturesque towns clinging to the cliffsides and the azure Mediterranean sea are simply magical.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "35",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:38:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "These destinations all sound incredible! Personally, I loved exploring the streets of Istanbul, Turkey. The mix of cultures and history is fascinating.",
+			"author": {
+				"id": "0",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "36",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:40:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Istanbul is such a vibrant city, Alex! The architecture and the food are unforgettable.",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "37",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:42:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Absolutely! The Grand Bazaar alone is an adventure in itself.",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "38",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:45:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I've always wanted to visit Istanbul! It's definitely on my travel bucket list now.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "39",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:48:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "It's definitely worth a visit, Daniel! You won't be disappointed.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		}
+	],
+	"messageCount": 10
+}

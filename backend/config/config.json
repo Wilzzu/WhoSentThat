@@ -1,0 +1,7 @@
+{
+	"chatters": {
+		"normalChatters": ["0", "1", "2"],
+		"rareChatters": ["3", "4"],
+		"superRareChatters": ["5"]
+	}
+}

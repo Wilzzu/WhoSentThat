@@ -1,0 +1,229 @@
+{
+	"guild": {
+		"id": "guildid",
+		"name": "guildname",
+		"iconUrl": "guildiconurl"
+	},
+	"channel": {
+		"id": "channelid",
+		"type": "channeltype",
+		"categoryId": "channelcategoryid",
+		"category": "channelcategory",
+		"name": "channelname",
+		"topic": null
+	},
+	"dateRange": {
+		"after": null,
+		"before": null
+	},
+	"messages": [
+		{
+			"id": "21",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:00:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "What's your favorite book that you've read recently?",
+			"author": {
+				"id": "0",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "22",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:02:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I recently read 'Ready Player One' by Ernest Cline and it was amazing!",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "23",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:05:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I recently finished 'The Song of Achilles' by Madeline Miller and it was absolutely beautiful.",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "24",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:08:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I recently got into sci-fi and 'Dune' by Frank Herbert blew my mind!",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "25",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:10:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I read 'Educated' by Tara Westover and it was a captivating memoir.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "26",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:12:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Those all sound like great reads! I've been diving into some classic literature lately, 'To Kill a Mockingbird' by Harper Lee is timeless.",
+			"author": {
+				"id": "0",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "27",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:15:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "'To Kill a Mockingbird' is a classic indeed, Alex! It's one of those books that stays with you long after you've finished reading.",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "28",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:18:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Absolutely, Michael! It tackles important themes that are still relevant today.",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "29",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:20:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "It's amazing how literature can reflect society and provoke important conversations.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		}
+	],
+	"messageCount": 9
+}

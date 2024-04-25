@@ -1,7 +1,9 @@
 const axios = require("axios");
+const asyncHandler = require("express-async-handler");
 
-// GET /api/authenticate
-module.exports = async function getAuthenticate(req, res) {
+// @desc    Check if user is part of the Discord group
+// @route   GET /api/authenticate
+const getAuthenticate = asyncHandler(async (req, res) => {
 	console.log("GET /api/authenticate", new Date().toLocaleString());
 	const accessToken = req.headers.authorization?.split(" ")[1];
 
@@ -27,4 +29,6 @@ module.exports = async function getAuthenticate(req, res) {
 	const isMember = userGuilds.some((guild) => guild.id === process.env.GUILD_ID);
 	if (!isMember) return res.status(200).json({ error: "User is not part of the Discord group" });
 	return res.status(200).json({ success: true });
-};
+});
+
+module.exports = getAuthenticate;
