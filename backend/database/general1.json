@@ -149,7 +149,12 @@
 				"isBot": false,
 				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
 			},
-			"attachments": [],
+			"attachments": [
+				{
+					"url": "https://cdn.britannica.com/30/128430-050-D6578398/Boston-Public-Garden.jpg",
+					"filename": "Boston-Public-Garden.jpg"
+				}
+			],
 			"embeds": [],
 			"stickers": [],
 			"reactions": [],
@@ -172,7 +177,7 @@
 				"isBot": false,
 				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
 			},
-			"attachments": [],
+			"attachments": [{ "url": "/chatImg1.jpg", "filename": "chatImg1.jpg" }],
 			"embeds": [],
 			"stickers": [],
 			"reactions": [],
@@ -287,7 +292,12 @@
 				"isBot": false,
 				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
 			},
-			"attachments": [],
+			"attachments": [
+				{
+					"url": "https://em-content.zobj.net/source/microsoft/379/thumbs-up_1f44d.png",
+					"filename": "thumbs-up_1f44d.png"
+				}
+			],
 			"embeds": [],
 			"stickers": [],
 			"reactions": [],
@@ -323,7 +333,7 @@
 			"timestampEdited": null,
 			"callEndedTimestamp": null,
 			"isPinned": false,
-			"content": "I'm excited for the game! Let's see who the best aimer is!",
+			"content": "I'm excited for the game! Let's see who has the best aim and strategies!",
 			"author": {
 				"id": "4",
 				"name": "Daniel",
@@ -379,7 +389,12 @@
 				"isBot": false,
 				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
 			},
-			"attachments": [],
+			"attachments": [
+				{
+					"url": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXQ9QVcJY8gulReQ0HdUuqkw9aDAhJgIAVaobW3IDho3P_HP20V74-ww4XZwaehZuzUwTMA7ZYkieyXptWljFLkqUs-Yjz1d4_DI1cgIQaHoI54NAc/330x192.png",
+					"filename": "330x192.png"
+				}
+			],
 			"embeds": [],
 			"stickers": [],
 			"reactions": [],
@@ -392,7 +407,7 @@
 			"timestampEdited": null,
 			"callEndedTimestamp": null,
 			"isPinned": false,
-			"content": "I'll try my best not to die first this time!",
+			"content": "I suggest you check out these smokes before we start: https://www.youtube.com/watch?v=eKH1jXeayy4",
 			"author": {
 				"id": "2",
 				"name": "Michael",
@@ -415,7 +430,7 @@
 			"timestampEdited": null,
 			"callEndedTimestamp": null,
 			"isPinned": false,
-			"content": "I'll hit all my AWP shots this time, mark my words!",
+			"content": "I'll hit all my shots this time, mark my words!",
 			"author": {
 				"id": "3",
 				"name": "Emily",
@@ -476,7 +491,30 @@
 			"stickers": [],
 			"reactions": [],
 			"mentions": []
+		},
+		{
+			"id": "20",
+			"type": "Default",
+			"timestamp": "2024-04-24T12:48:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Guys I found this cool new spot, maybe we can try it out in the game!",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [{ "url": "/chatVid1.mp4", "filename": "chatVid1.mp4" }],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
 		}
 	],
-	"messageCount": 20
+	"messageCount": 21
 }

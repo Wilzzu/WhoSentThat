@@ -1,0 +1,1018 @@
+{
+	"guild": {
+		"id": "guildid",
+		"name": "guildname",
+		"iconUrl": "guildiconurl"
+	},
+	"channel": {
+		"id": "channelid",
+		"type": "channeltype",
+		"categoryId": "channelcategoryid",
+		"category": "channelcategory",
+		"name": "channelname",
+		"topic": null
+	},
+	"dateRange": {
+		"after": null,
+		"before": null
+	},
+	"messages": [
+		{
+			"id": "40",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:00:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Hey everyone! Let's talk about our favorite hobbies outside of work or school. What do you enjoy doing in your free time?",
+			"author": {
+				"id": "0",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "41",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:02:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "In my free time, I love playing the guitar. It's a great way to relax and express myself creatively.",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "42",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:05:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I enjoy hiking in nature whenever I can. It's refreshing and helps me clear my mind.",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "43",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:08:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "For me, it's cooking! Trying out new recipes and experimenting with flavors is both fun and rewarding.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [
+				{
+					"url": "https://www.health.com/thmb/wfkIOj5dW5H6QLhXqEFHw87ow08=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-1477430966-506a007e48744d5488a6ee1c0b729134.jpg",
+					"filename": "Health-GettyImages-1477430966-506a007e48744d5488a6ee1c0b729134.jpg"
+				}
+			],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "44",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:10:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "In my free time, I enjoy photography. Capturing moments and exploring different perspectives is truly fulfilling.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "45",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:12:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I love reading! Curling up with a good book is my favorite way to unwind after a long day.",
+			"author": {
+				"id": "0",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "46",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:15:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Reading is a wonderful hobby, Alex! It's a great way to escape into different worlds.",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "47",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:18:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Absolutely! It's amazing how a good book can transport you to different places and times.",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "48",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:20:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Indeed, Emily! It's like going on an adventure without leaving your home.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "49",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:22:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Absolutely! And the best part is, you can go on as many adventures as you want, without ever running out of books.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "78",
+			"type": "Default",
+			"timestamp": "2024-04-24T15:30:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Hey, have any of you tried that new restaurant downtown? I heard they have amazing sushi!",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [
+				{
+					"url": "https://blog.sakura.co/wp-content/uploads/2022/03/shutterstock_673266502-2.png",
+					"filename": "shutterstock_673266502-2.png"
+				}
+			],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "79",
+			"type": "Default",
+			"timestamp": "2024-04-24T15:32:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I've been meaning to try it! Sushi sounds fantastic right now.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "80",
+			"type": "Default",
+			"timestamp": "2024-04-24T15:34:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Count me in! I could really go for some sushi right about now.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "81",
+			"type": "Default",
+			"timestamp": "2024-04-24T15:36:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Sounds like a plan! I've been craving some good sushi lately.",
+			"author": {
+				"id": "1",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "82",
+			"type": "Default",
+			"timestamp": "2024-04-24T15:38:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I'm down for some sushi! Let's make plans to go together.",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "83",
+			"type": "Default",
+			"timestamp": "2024-04-24T15:40:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Sounds like a plan! How about this Friday evening?",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "84",
+			"type": "Default",
+			"timestamp": "2024-04-24T15:42:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Friday evening works for me! What time?",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "85",
+			"type": "Default",
+			"timestamp": "2024-04-24T15:44:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "How about 7 PM? That should give us enough time to unwind after work.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "86",
+			"type": "Default",
+			"timestamp": "2024-04-24T15:46:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "7 PM sounds perfect! Can't wait to try out that sushi place.",
+			"author": {
+				"id": "1",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "87",
+			"type": "Default",
+			"timestamp": "2024-04-24T15:48:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Sounds like a fantastic plan! I'll mark my calendar for Friday at 7 PM.",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [
+				{
+					"url": "https://t3.ftcdn.net/jpg/04/41/98/10/360_F_441981078_7NK6ZeiWTzPkPQA8UWEwKbAtpE8QMOlv.jpg",
+					"filename": "360_F_441981078_7NK6ZeiWTzPkPQA8UWEwKbAtpE8QMOlv.jpg"
+				}
+			],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "88",
+			"type": "Default",
+			"timestamp": "2024-04-26T19:15:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Hey, everyone! I'm here at the restaurant. Where are you all sitting?",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "89",
+			"type": "Default",
+			"timestamp": "2024-04-26T19:17:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I'm already here too, Emily! We got a table by the window.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "90",
+			"type": "Default",
+			"timestamp": "2024-04-26T19:20:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Great, I'll come find you guys! Is anyone else on their way?",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "91",
+			"type": "Default",
+			"timestamp": "2024-04-26T19:22:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I'm on my way! Should be there in about 10 minutes.",
+			"author": {
+				"id": "1",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [
+				{
+					"url": "https://pbs.twimg.com/media/FusHOBEWAAEocP0.jpg",
+					"filename": "FusHOBEWAAEocP0.jpg"
+				}
+			],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "92",
+			"type": "Default",
+			"timestamp": "2024-04-26T19:25:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Perfect, Alex! We'll save you a seat.",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "108",
+			"type": "Default",
+			"timestamp": "2024-05-04T20:00:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I've been experimenting with different cooking techniques lately. It's been so much fun exploring new flavors!",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "109",
+			"type": "Default",
+			"timestamp": "2024-05-04T20:02:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "That sounds delicious, Emily! What kind of dishes have you been trying out?",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "110",
+			"type": "Default",
+			"timestamp": "2024-05-04T20:05:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I've been experimenting with Asian cuisine lately. Trying my hand at making sushi rolls and dumplings!",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [
+				{
+					"url": "https://peasandcrayons.com/wp-content/uploads/2012/10/homemade-sushi-tutorial-recipe-peas-and-crayons-1250.jpg",
+					"filename": "homemade-sushi-tutorial-recipe-peas-and-crayons-1250.jpg"
+				}
+			],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "111",
+			"type": "Default",
+			"timestamp": "2024-05-04T20:08:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "That sounds amazing, Jessica! Homemade sushi rolls must be delicious.",
+			"author": {
+				"id": "1",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "112",
+			"type": "Default",
+			"timestamp": "2024-05-04T20:10:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Emily, you'll have to share some recipes with us! I'd love to try making sushi at home.",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "113",
+			"type": "Default",
+			"timestamp": "2024-05-04T20:12:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "That's a great idea, Michael! How about we have a sushi-making night at my place next weekend?",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "114",
+			"type": "Default",
+			"timestamp": "2024-05-04T20:15:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Count me in, Emily! I'd love to learn how to make sushi.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "115",
+			"type": "Default",
+			"timestamp": "2024-05-04T20:18:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I'm in too! It'll be a fun way to spend time together and learn something new.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "116",
+			"type": "Default",
+			"timestamp": "2024-05-04T20:20:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Sounds like a fantastic plan, Emily! I can't wait to try making sushi with you all.",
+			"author": {
+				"id": "1",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "117",
+			"type": "Default",
+			"timestamp": "2024-05-04T20:22:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Awesome! Let's plan to start around 6 p.m. next Saturday. I'll make sure to have all the ingredients ready.",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "118",
+			"type": "Default",
+			"timestamp": "2024-05-04T20:25:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Sounds perfect, Emily! I'll make sure to clear my schedule for that evening.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "119",
+			"type": "Default",
+			"timestamp": "2024-05-04T20:28:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Count me in, Emily! I'll bring some sake to enjoy with our sushi.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [
+				{
+					"url": "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2019/11/Sake-Unsplash.gif",
+					"filename": "Sake-Unsplash.gif"
+				}
+			],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "120",
+			"type": "Default",
+			"timestamp": "2024-05-04T20:30:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I'll mark it on my calendar, Emily! Can't wait for our sushi night.",
+			"author": {
+				"id": "1",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "121",
+			"type": "Default",
+			"timestamp": "2024-05-11T19:00:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Thanks for coming over for the sushi-making night, everyone! I had a blast.",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "122",
+			"type": "Default",
+			"timestamp": "2024-05-11T19:05:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "It was so much fun, Emily! Thanks for hosting. The sushi turned out delicious.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "123",
+			"type": "Default",
+			"timestamp": "2024-05-11T19:10:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I had a great time too, Emily! Your homemade sushi was amazing. We should do this again sometime.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "124",
+			"type": "Default",
+			"timestamp": "2024-05-11T19:15:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Absolutely, Emily! It was a wonderful evening. Can't wait for the next one.",
+			"author": {
+				"id": "1",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		}
+	],
+	"messageCount": 42
+}

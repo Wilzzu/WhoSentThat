@@ -55,7 +55,7 @@ const WhoStartButton = (props) => {
 		);
 	}
 
-	// Otherwise show the play button and loading state
+	// Otherwise show the play button or loading state
 	return (
 		<>
 			<button
@@ -71,9 +71,9 @@ const WhoStartButton = (props) => {
 					{props.auth?.authData?.success ? "Play" : <LoadingSpinner color={"white"} />}
 				</p>
 			</button>
+			{/* Logged user data */}
 			{props.user?.data?.user && (
 				<div className="flex items-center justify-between gap-2 mt-2 w-full p-1 bg-[#2F80ED40] rounded-md">
-					{/* bg-blackishLight p-2 rounded-xl */}
 					<span className="flex items-center justify-center gap-2">
 						<img
 							src={props.user?.data?.user?.user_metadata?.avatar_url || anonImg}

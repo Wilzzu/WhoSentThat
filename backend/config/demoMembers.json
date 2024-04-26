@@ -4,5 +4,9 @@
 	{ "id": "2", "avatar": "https://cdn.discordapp.com/embed/avatars/2.png", "nickname": "Michael" },
 	{ "id": "3", "avatar": "https://cdn.discordapp.com/embed/avatars/3.png", "nickname": "Emily" },
 	{ "id": "4", "avatar": "https://cdn.discordapp.com/embed/avatars/4.png", "nickname": "Daniel" },
-	{ "id": "5", "avatar": "https://cdn.discordapp.com/embed/avatars/5.png", "nickname": "Jessica" }
+	{ "id": "5", "avatar": "https://cdn.discordapp.com/embed/avatars/5.png", "nickname": "Jessica" },
+	{ "id": "6", "avatar": "https://cdn.discordapp.com/embed/avatars/1.png", "nickname": "David" },
+	{ "id": "7", "avatar": "https://cdn.discordapp.com/embed/avatars/2.png", "nickname": "Olivia" },
+	{ "id": "8", "avatar": "https://cdn.discordapp.com/embed/avatars/3.png", "nickname": "James" },
+	{ "id": "9", "avatar": "https://cdn.discordapp.com/embed/avatars/4.png", "nickname": "Sophia" }
 ]

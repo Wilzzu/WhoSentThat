@@ -1,7 +1,17 @@
 {
 	"chatters": {
-		"normalChatters": ["0", "1", "2"],
-		"rareChatters": ["3", "4"],
-		"superRareChatters": ["5"]
+		"normal": ["0", "1", "2", "3", "4"],
+		"rare": ["5", "6", "7"],
+		"superRare": ["8", "9"]
+	},
+	"messages": {
+		"files": {
+			"rare": ["category1"],
+			"superRare": ["category2"],
+			"oldAmount": 2,
+			"newAmount": 1,
+			"divideGeneralMessagesBy": 2
+		},
+		"rarity": { "general": 50, "rare": 40 }
 	}
 }

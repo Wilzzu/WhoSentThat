@@ -12,22 +12,36 @@ const demoMembers = require("../config/demoMembers.json");
 const getQuestion = asyncHandler(async (req, res) => {
 	console.log("GET /api/new", new Date().toLocaleString());
 	let files = [];
-	let seed = Math.floor(Math.random() * 1000);
+	let seed = Math.floor(Math.random() * 100);
 
-	// 84% general messages (65% old chat logs, 35% new chat logs), 12% 1st categories, 4% 2nd categories
-	if (seed < 840) {
-		if (seed < 546) {
-			// 1 - number of old chat logs, here we only have 1, so the range is from 1 to 1
-			for (i = 1; i <= 1; i++) files.push("general" + i);
+	// 50% general messages (50% old chat logs, 50% new chat logs), 40% rare messages, 10% super rare messages
+	if (seed <= config.messages.rarity.general) {
+		if (seed < config.messages.rarity.general / config.messages.files.divideGeneralMessagesBy) {
+			// 1 - number of old chat logs, here we have 2, so the range is from 1 to 2
+			for (i = 1; i <= config.messages.files.oldAmount; i++) files.push("general" + i);
+			console.log("general files old", files);
 		} else {
-			// If you have more than 1 old chat log, start this range from whatever the next number is, here it's 2, and end it at the last number of files
+			// Start this range from whatever the next number of chat logs would be, here it's 3, and end it at the last number of files
 			// eg. If you have 3 old chat logs and 4 new chat logs, this range would be from 4 to 7
-			for (i = 2; i <= 2; i++) files.push("general" + i);
+			for (
+				i = config.messages.files.oldAmount + 1;
+				i <= config.messages.files.oldAmount + config.messages.files.newAmount;
+				i++
+			)
+				files.push("general" + i);
+			console.log("general files new", files);
 		}
+	} else if (
+		seed > config.messages.rarity.general &&
+		seed <= config.messages.rarity.rare + config.messages.rarity.general
+	) {
+		files = config.messages.files.rare;
+		console.log("rare file", files);
 	}
-	// Other categories
-	if (seed >= 840 && seed < 960) files = ["category1"];
-	if (seed >= 960) files = ["category2"];
+	if (seed > config.messages.rarity.rare + config.messages.rarity.general) {
+		files = config.messages.files.superRare;
+		console.log("super rare file", files);
+	}
 
 	const chosenFile = files[Math.floor(Math.random() * files.length)];
 	// Read selected file and return question object
@@ -95,7 +109,7 @@ const questionObject = async (data, res) => {
 
 	// Select who should be shown as choices, 3 normal chatters, 1 rare
 	const choices = [];
-	let tempNormal = [...config.chatters.normalChatters];
+	let tempNormal = [...config.chatters.normal];
 
 	// Put correct one as first
 	let correctMember = members.find((e) => e.id === message.author.id);
@@ -110,59 +124,48 @@ const questionObject = async (data, res) => {
 		correctMember = message.author;
 	}
 
-	// Logic for adding the rest of the choices, we will be skipping this for the demo
-	// Instead we will just add 3 random members
-	const filteredChoices = members.filter((e) => e.id !== correctMember.id);
-	for (i = 0; i < 3; i++) {
-		const randomChatter = Math.floor(Math.random() * filteredChoices.length);
-		let random = filteredChoices[randomChatter];
-		random.uuid = randomUUID();
-		choices.push(random);
-		filteredChoices.splice(randomChatter, 1);
-	}
-
+	// Logic for adding the rest of the choices
 	// If correct is rare, add 3 normal ones
-	// if (
-	// 	config.chatters.rareChatters.includes(correctMember.id) ||
-	// 	config.chatters.superRareChatters.includes(correctMember.id)
-	// ) {
-	// 	for (i = 0; i < 3; i++) {
-	// 		const randomChatter = Math.floor(Math.random() * tempNormal.length);
-	// 		let random = members.find((e) => e.id === tempNormal[randomChatter]);
-	// 		if (random) {
-	// 			random.uuid = randomUUID();
-	// 			choices.push(random);
-	// 		} else {
-	// 			console.log("Didnt find ID: " + tempNormal[randomChatter]);
-	// 			i = i - 1;
-	// 		}
-	// 		tempNormal.splice(randomChatter, 1);
-	// 	}
-	// }
+	if (
+		config.chatters.rare.includes(correctMember.id) ||
+		config.chatters.superRare.includes(correctMember.id)
+	) {
+		for (i = 0; i < 3; i++) {
+			const randomChatter = Math.floor(Math.random() * tempNormal.length);
+			let random = members.find((e) => e.id === tempNormal[randomChatter]);
+			if (random) {
+				random.uuid = randomUUID();
+				choices.push(random);
+			} else {
+				console.log("Didnt find ID: " + tempNormal[randomChatter]);
+				i = i - 1;
+			}
+			tempNormal.splice(randomChatter, 1);
+		}
+	}
 	// // If correct is normal, add 1 rare 12% (25% chance for super rare instead) of the time and 2 normal ones
-	// else {
-	// 	let normalAmount = 3;
-	// 	let randomRare = Math.random();
-	// 	if (randomRare > 0.88) {
-	// 		if (randomRare >= 0.985) randomizeRare(choices, members, config.chatters.superRareChatters);
-	// 		else randomizeRare(choices, members, config.chatters.rareChatters);
-	// 		normalAmount = 2;
-	// 	}
-	// 	tempNormalFiltered = tempNormal.filter((e) => e !== message.author.id);
-	// 	for (i = 0; i < normalAmount; i++) {
-	// 		const randomChatter = Math.floor(Math.random() * tempNormalFiltered.length);
-	// 		console.log(randomChatter, tempNormalFiltered[randomChatter]);
-	// 		let random = members.find((e) => e.id === tempNormalFiltered[randomChatter]);
-	// 		if (random) {
-	// 			random.uuid = randomUUID();
-	// 			choices.push(random);
-	// 		} else {
-	// 			console.log("Didnt find: " + tempNormalFiltered[randomChatter]);
-	// 			i = i - 1;
-	// 		}
-	// 		tempNormalFiltered.splice(randomChatter, 1);
-	// 	}
-	// }
+	else {
+		let normalAmount = 3;
+		let randomRare = Math.random();
+		if (randomRare > 0.88) {
+			if (randomRare >= 0.985) randomizeRare(choices, members, config.chatters.superRare);
+			else randomizeRare(choices, members, config.chatters.rare);
+			normalAmount = 2;
+		}
+		tempNormalFiltered = tempNormal.filter((e) => e !== message.author.id);
+		for (i = 0; i < normalAmount; i++) {
+			const randomChatter = Math.floor(Math.random() * tempNormalFiltered.length);
+			let random = members.find((e) => e.id === tempNormalFiltered[randomChatter]);
+			if (random) {
+				random.uuid = randomUUID();
+				choices.push(random);
+			} else {
+				console.log("Didnt find: " + tempNormalFiltered[randomChatter]);
+				i = i - 1;
+			}
+			tempNormalFiltered.splice(randomChatter, 1);
+		}
+	}
 
 	// Lastly randomize the array
 	// Array randomizer from https://stackoverflow.com/a/2450976

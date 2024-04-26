@@ -346,6 +346,18 @@ const WhoPlaying = (props) => {
 								</AnimatePresence>
 							</div>
 						</div>
+						{/* DEMO */}
+						<div className="w-full flex items-center justify-center text-whiteish font-poppins text-base lg:text-xl text-shadow-sm gap-4 mt-2">
+							<h1>Demo cheat:</h1>
+							{/* Pick correct */}
+							<button
+								onClick={() => checkAnswer(props.data[0]?.question.author.id)}
+								disabled={disable}
+								className={`flex items-center justify-center gap-2 lg:gap-5 px-10 lg:px-16 text-white font-poppins bg-gradient-to-l bg-[#2F80ED] from-transparent to-[#56CCF2] rounded-lg h-16 shadow-inner shadow-[#ffffff38] 
+							${!disable && "hover:bg-[#68a9ff] duration-150"}`}>
+								Pick correct
+							</button>
+						</div>
 					</motion.div>
 
 					{/* DEV */}

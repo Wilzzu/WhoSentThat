@@ -246,7 +246,122 @@
 			"stickers": [],
 			"reactions": [],
 			"mentions": []
+		},
+		{
+			"id": "40",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:50:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I'll make sure to add it to my list! Thanks for the recommendation, Jessica.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "41",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:52:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "You're welcome, Daniel! I hope you get to experience the magic of Istanbul soon.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "42",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:55:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I'm sure I will! Thanks again, Jessica.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "43",
+			"type": "Default",
+			"timestamp": "2024-04-24T13:58:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I'm glad we could share our favorite travel destinations! It's always fun to hear about different places and experiences.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "44",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:00:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Absolutely, Daniel! It's always great to learn about new places and cultures. Thanks for sharing your experiences with us.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
 		}
 	],
-	"messageCount": 10
+	"messageCount": 15
 }

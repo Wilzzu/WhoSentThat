@@ -18,15 +18,15 @@
 	},
 	"messages": [
 		{
-			"id": "40",
+			"id": "50",
 			"type": "Default",
-			"timestamp": "2024-04-24T14:00:00.000+00:00",
+			"timestamp": "2024-04-24T14:30:00.000+00:00",
 			"timestampEdited": null,
 			"callEndedTimestamp": null,
 			"isPinned": false,
-			"content": "Hey everyone! Let's talk about our favorite hobbies outside of work or school. What do you enjoy doing in your free time?",
+			"content": "My cat, Luna, has been acting so mischievous lately! She keeps knocking things off the shelves.",
 			"author": {
-				"id": "0",
+				"id": "1",
 				"name": "Alex",
 				"discriminator": "0",
 				"nickname": "Alex",
@@ -41,13 +41,13 @@
 			"mentions": []
 		},
 		{
-			"id": "41",
+			"id": "51",
 			"type": "Default",
-			"timestamp": "2024-04-24T14:02:00.000+00:00",
+			"timestamp": "2024-04-24T14:32:00.000+00:00",
 			"timestampEdited": null,
 			"callEndedTimestamp": null,
 			"isPinned": false,
-			"content": "In my free time, I love playing the guitar. It's a great way to relax and express myself creatively.",
+			"content": "Oh, Alex, Luna sounds adorable! Maybe she's just trying to get your attention.",
 			"author": {
 				"id": "2",
 				"name": "Michael",
@@ -64,13 +64,13 @@
 			"mentions": []
 		},
 		{
-			"id": "42",
+			"id": "52",
 			"type": "Default",
-			"timestamp": "2024-04-24T14:05:00.000+00:00",
+			"timestamp": "2024-04-24T14:35:00.000+00:00",
 			"timestampEdited": null,
 			"callEndedTimestamp": null,
 			"isPinned": false,
-			"content": "I enjoy hiking in nature whenever I can. It's refreshing and helps me clear my mind.",
+			"content": "I can relate, Alex! My cat, Simba, loves to knock pens off my desk when he wants attention.",
 			"author": {
 				"id": "3",
 				"name": "Emily",
@@ -87,13 +87,13 @@
 			"mentions": []
 		},
 		{
-			"id": "43",
+			"id": "53",
 			"type": "Default",
-			"timestamp": "2024-04-24T14:08:00.000+00:00",
+			"timestamp": "2024-04-24T14:38:00.000+00:00",
 			"timestampEdited": null,
 			"callEndedTimestamp": null,
 			"isPinned": false,
-			"content": "For me, it's cooking! Trying out new recipes and experimenting with flavors is both fun and rewarding.",
+			"content": "Haha, sounds like Luna and Simba have a lot in common, Emily! Cats really know how to make their presence known.",
 			"author": {
 				"id": "4",
 				"name": "Daniel",
@@ -110,13 +110,13 @@
 			"mentions": []
 		},
 		{
-			"id": "44",
+			"id": "54",
 			"type": "Default",
-			"timestamp": "2024-04-24T14:10:00.000+00:00",
+			"timestamp": "2024-04-24T14:40:00.000+00:00",
 			"timestampEdited": null,
 			"callEndedTimestamp": null,
 			"isPinned": false,
-			"content": "In my free time, I enjoy photography. Capturing moments and exploring different perspectives is truly fulfilling.",
+			"content": "Cats definitely have their own unique ways of getting attention! My cat, Whiskers, loves to meow loudly until I acknowledge him.",
 			"author": {
 				"id": "5",
 				"name": "Jessica",
@@ -133,15 +133,130 @@
 			"mentions": []
 		},
 		{
-			"id": "45",
+			"id": "55",
 			"type": "Default",
-			"timestamp": "2024-04-24T14:12:00.000+00:00",
+			"timestamp": "2024-04-24T14:30:00.000+00:00",
 			"timestampEdited": null,
 			"callEndedTimestamp": null,
 			"isPinned": false,
-			"content": "I love reading! Curling up with a good book is my favorite way to unwind after a long day.",
+			"content": "Look how funny this cat looks when it's eating 😂",
 			"author": {
-				"id": "0",
+				"id": "1",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [{ "url": "/chatVid2.mp4", "filename": "chatVid2.mp4" }],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "56",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:32:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "My cat looks so cute when she is laying down 🥺",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [{ "url": "/chatVid3.mp4", "filename": "chatVid3.mp4" }],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "57",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:35:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Aww here is a video of my cat sleeping 😴",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [{ "url": "/chatVid4.mp4", "filename": "chatVid4.mp4" }],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "58",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:38:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Look at this cat go on an adventure :o https://www.youtube.com/watch?v=9JWz2iMbYx4",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "59",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:40:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Here is a picture of my cat, Whiskers, playing with his favorite toy 🐱",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [{ "url": "/chatImg2.jpg", "filename": "chatImg2.jpg" }],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "60",
+			"type": "Default",
+			"timestamp": "2024-04-24T14:30:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I love how cats have such unique personalities! They always keep us entertained.",
+			"author": {
+				"id": "1",
 				"name": "Alex",
 				"discriminator": "0",
 				"nickname": "Alex",
@@ -156,13 +271,110 @@
 			"mentions": []
 		},
 		{
-			"id": "46",
+			"id": "93",
 			"type": "Default",
-			"timestamp": "2024-04-24T14:15:00.000+00:00",
+			"timestamp": "2024-04-28T14:30:00.000+00:00",
 			"timestampEdited": null,
 			"callEndedTimestamp": null,
 			"isPinned": false,
-			"content": "Reading is a wonderful hobby, Alex! It's a great way to escape into different worlds.",
+			"content": "Hey everyone, I just watched the new movie that came out last week. It was incredible!",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "94",
+			"type": "Default",
+			"timestamp": "2024-04-28T14:32:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Really? Which movie was it, Emily?",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "95",
+			"type": "Default",
+			"timestamp": "2024-04-28T14:35:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "It was 'Dune: Part Two'. The visuals were stunning, and the storyline was so captivating!",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [
+				{
+					"url": "https://cdn.bestmovie.it/wp-content/uploads/2024/03/dune-2-1.jpg",
+					"filename": "dune-2-1.jpg"
+				}
+			],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "96",
+			"type": "Default",
+			"timestamp": "2024-04-28T14:38:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "'Dune: Part Two'? I've heard good things about it. I should check it out this weekend.",
+			"author": {
+				"id": "1",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "97",
+			"type": "Default",
+			"timestamp": "2024-04-28T14:40:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I'm planning to watch it too! Maybe we could all go together?",
 			"author": {
 				"id": "2",
 				"name": "Michael",
@@ -179,13 +391,13 @@
 			"mentions": []
 		},
 		{
-			"id": "47",
+			"id": "98",
 			"type": "Default",
-			"timestamp": "2024-04-24T14:18:00.000+00:00",
+			"timestamp": "2024-04-30T16:00:00.000+00:00",
 			"timestampEdited": null,
 			"callEndedTimestamp": null,
 			"isPinned": false,
-			"content": "Absolutely! It's amazing how a good book can transport you to different places and times.",
+			"content": "I recently started learning to play the guitar. It's been challenging but really rewarding!",
 			"author": {
 				"id": "3",
 				"name": "Emily",
@@ -202,13 +414,13 @@
 			"mentions": []
 		},
 		{
-			"id": "48",
+			"id": "99",
 			"type": "Default",
-			"timestamp": "2024-04-24T14:20:00.000+00:00",
+			"timestamp": "2024-04-30T16:02:00.000+00:00",
 			"timestampEdited": null,
 			"callEndedTimestamp": null,
 			"isPinned": false,
-			"content": "Indeed, Emily! It's like going on an adventure without leaving your home.",
+			"content": "That's awesome, Emily! What made you decide to pick up the guitar?",
 			"author": {
 				"id": "4",
 				"name": "Daniel",
@@ -225,13 +437,13 @@
 			"mentions": []
 		},
 		{
-			"id": "49",
+			"id": "100",
 			"type": "Default",
-			"timestamp": "2024-04-24T14:22:00.000+00:00",
+			"timestamp": "2024-04-30T16:05:00.000+00:00",
 			"timestampEdited": null,
 			"callEndedTimestamp": null,
 			"isPinned": false,
-			"content": "Absolutely! And the best part is, you can go on as many adventures as you want, without ever running out of books.",
+			"content": "I've always loved music, and I wanted to challenge myself to learn something new. Plus, playing the guitar just seemed really cool!",
 			"author": {
 				"id": "5",
 				"name": "Jessica",
@@ -240,6 +452,172 @@
 				"color": "#E74C3C",
 				"isBot": false,
 				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "101",
+			"type": "Default",
+			"timestamp": "2024-04-30T16:08:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "That's really cool, Jessica! How's your progress been so far, Emily?",
+			"author": {
+				"id": "1",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "102",
+			"type": "Default",
+			"timestamp": "2024-04-30T16:10:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "It's been slow but steady! I can play a few chords now, which feels like a big accomplishment.",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "103",
+			"type": "Default",
+			"timestamp": "2024-05-02T18:00:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "I've been thinking about taking up hiking. It seems like a great way to stay active and enjoy nature.",
+			"author": {
+				"id": "3",
+				"name": "Emily",
+				"discriminator": "3",
+				"nickname": "Emily",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/3.png"
+			},
+			"attachments": [
+				{
+					"url": "https://www.muchbetteradventures.com/magazine/content/images/size/w2000/2019/11/22103353/iStock-1153641199.jpg",
+					"filename": "iStock-1153641199.jpg"
+				}
+			],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "104",
+			"type": "Default",
+			"timestamp": "2024-05-02T18:02:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Hiking sounds amazing, Emily! There are so many beautiful trails out there to explore.",
+			"author": {
+				"id": "4",
+				"name": "Daniel",
+				"discriminator": "4",
+				"nickname": "Daniel",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "105",
+			"type": "Default",
+			"timestamp": "2024-05-02T18:05:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "It's a great way to disconnect from technology and reconnect with nature.",
+			"author": {
+				"id": "5",
+				"name": "Jessica",
+				"discriminator": "5",
+				"nickname": "Jessica",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/5.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "106",
+			"type": "Default",
+			"timestamp": "2024-05-02T18:08:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "Hiking allows us to appreciate the beauty of the world around us in a way that's hard to replicate.",
+			"author": {
+				"id": "1",
+				"name": "Alex",
+				"discriminator": "0",
+				"nickname": "Alex",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/0.png"
+			},
+			"attachments": [],
+			"embeds": [],
+			"stickers": [],
+			"reactions": [],
+			"mentions": []
+		},
+		{
+			"id": "107",
+			"type": "Default",
+			"timestamp": "2024-05-02T18:10:00.000+00:00",
+			"timestampEdited": null,
+			"callEndedTimestamp": null,
+			"isPinned": false,
+			"content": "It's amazing how refreshing and rejuvenating it can be to spend time in nature.",
+			"author": {
+				"id": "2",
+				"name": "Michael",
+				"discriminator": "2",
+				"nickname": "Michael",
+				"color": "#E74C3C",
+				"isBot": false,
+				"avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
 			},
 			"attachments": [],
 			"embeds": [],
@@ -248,5 +626,5 @@
 			"mentions": []
 		}
 	],
-	"messageCount": 10
+	"messageCount": 26
 }
