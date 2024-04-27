@@ -60,7 +60,7 @@ const PreviousMessage = forwardRef((props, ref) => {
 				<p className="text-left mt-[2px] text-sm lg:text-lg font-medium opacity-50 text-whiteish select-none">
 					{props.isAnon ? "?????" : props.data.author.name}:
 				</p>
-				<div className="max-h-[100px] w-full pr-3 overflow-y-auto break-words scrollNormal scrollbar scrollbar-thumb-whiteish scrollbar-thumb-rounded-full scrollbar-w-2">
+				<div className="max-h-[100px] w-full pr-3 overflow-y-auto break-words scrollNormal scrollbar scrollbar-thumb-whiteish scrollbar-thumb-rounded-full scrollbar-w-1">
 					{/* Text field */}
 					{props.data.content.length > 0 && (
 						<div className="text-lg lg:text-2xl font-hanken text-white text-left">

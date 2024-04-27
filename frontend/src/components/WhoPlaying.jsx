@@ -214,11 +214,11 @@ const WhoPlaying = (props) => {
 						}}
 						style={{ minHeight: lastQuestionHeight }}
 						className={
-							"w-full px-1 lg:px-0 min-h-[152px] max-h-[450px] flex flex-col gap-1 lg:gap-2 items-center justify-start duration-700 mb-2 lg:mb-8 " +
+							"w-full max-w-[900px] px-1 lg:px-0 min-h-[152px] max-h-[450px] flex flex-col gap-1 lg:gap-2 items-center justify-start duration-700 mb-2 lg:mb-8 " +
 							(showPreviousMsgs && " [overflow:overlay] ") +
 							(!showPrevScroll && showPreviousMsgs && " scrollbar-none ") +
 							(showPrevScroll &&
-								" scrollNormal scrollbar scrollbar-thumb-[#25364d] scrollbar-thumb-rounded-full scrollbar-w-2")
+								" scrollNormal scrollbar scrollbar-thumb-[#3184ED] scrollbar-thumb-rounded-full scrollbar-w-2")
 						}>
 						<AnimatePresence>
 							{showPreviousMsgs &&
@@ -237,7 +237,7 @@ const WhoPlaying = (props) => {
 						{/* Question Card */}
 						{/* Enables buttons after card has exited */}
 						{!props.data ? (
-							<div className="p-2 flex flex-col gap-2 items-center font-poppins text-whiteish text-l">
+							<div className="p-2 flex flex-col gap-2 items-center font-poppins text-whiteish text-lg">
 								{showFirstLoading && (
 									<>
 										<p>Loading question...</p>
@@ -286,7 +286,7 @@ const WhoPlaying = (props) => {
 									y: 200,
 									transition: { type: "tween", ease: "easeIn", duration: 0.6, delay: 0.8 },
 								}}
-								className="w-full lg:w-3/4 mt-8 lg:mt-10 flex items-center justify-between gap-2 lg:gap-5 h-12 lg:h-16 mb-2">
+								className="w-full mt-8 lg:mt-10 flex items-center justify-between gap-2 lg:gap-5 h-12 lg:h-16 mb-2">
 								{/* Lives */}
 								<div className="h-full w-80 flex">
 									<div className="h-full bg-gradient-to-br from-[#0F2027] to-[#1a2d33] px-3 lg:px-6 rounded-xl flex items-center justify-center gap-2 shadow-md select-none">
@@ -328,7 +328,7 @@ const WhoPlaying = (props) => {
 						</div>
 						{/* Choices container */}
 						<div className="flex justify-center">
-							<div className="h-[204px] lg:h-[240px] w-full lg:w-3/4 overflow-hidden grid grid-cols-2 gap-3 lg:gap-4 bg-[#0F2027] bg-gradient-to-br from-[#0F2027] via-[#203A43] to-[#1b3946] rounded-lg lg:rounded-xl p-4 lg:p-8 z-10 shadow-xl">
+							<div className="h-[204px] lg:h-[240px] w-full overflow-hidden grid grid-cols-2 gap-3 lg:gap-4 bg-[#0F2027] bg-gradient-to-br from-[#0F2027] via-[#203A43] to-[#1b3946] rounded-lg lg:rounded-xl p-4 lg:p-8 z-10 shadow-xl">
 								<AnimatePresence onExitComplete={() => setShowChoices(true)}>
 									{showChoices &&
 										choices?.map((e, i) => {
@@ -347,13 +347,13 @@ const WhoPlaying = (props) => {
 							</div>
 						</div>
 						{/* DEMO */}
-						<div className="w-full flex items-center justify-center text-whiteish font-poppins text-base lg:text-xl text-shadow-sm gap-4 mt-2">
+						<div className="w-full flex items-center justify-center text-whiteish font-poppins text-base lg:text-xl text-shadow-sm shadow-[#2e2e2e60]  gap-4 mt-2">
 							<h1>Demo cheat:</h1>
 							{/* Pick correct */}
 							<button
 								onClick={() => checkAnswer(props.data[0]?.question.author.id)}
 								disabled={disable}
-								className={`flex items-center justify-center gap-2 lg:gap-5 px-10 lg:px-16 text-white font-poppins bg-gradient-to-l bg-[#2F80ED] from-transparent to-[#56CCF2] rounded-lg h-16 shadow-inner shadow-[#ffffff38] 
+								className={`flex items-center justify-center gap-2 lg:gap-5 px-10 lg:px-16 text-white font-poppins drop-shadow bg-gradient-to-l bg-[#2F80ED] from-transparent to-[#56CCF2] rounded-lg h-16 shadow-inner shadow-[#ffffff38] 
 							${!disable && "hover:bg-[#68a9ff] duration-150"}`}>
 								Pick correct
 							</button>

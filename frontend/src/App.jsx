@@ -11,8 +11,9 @@ import useLocalStorage from "./hooks/useLocalStorage";
 import useAuthenticate from "./hooks/useAuthenticate";
 import useGetQuestion from "./hooks/useGetQuestion";
 import WhoPlaying from "./components/WhoPlaying";
-
-const user = await supabase.auth.getUser();
+import "./App.css";
+import Footer from "./components/Footer";
+import { v4 as uuid } from "uuid";
 
 const App = () => {
 	// Setting user's session token used for questions
@@ -21,9 +22,45 @@ const App = () => {
 	const { getItem, setItem, removeItem } = useLocalStorage();
 	const [token, setToken] = useState(getItem("WST", "token"));
 	const { authData, authLoading, authIsError, refetchAuth } = useAuthenticate(token);
+	const [user, setUser] = useState(null);
+
+	const demoUserId = () => {
+		let id = getItem("WST", "demo_id");
+		if (!id) {
+			id = uuid();
+			setItem("WST", "demo_id", id);
+		}
+		return id;
+	};
+
+	const generateDemoUser = () => {
+		const demoUser = {
+			data: {
+				user: {
+					user_metadata: {
+						provider_id: demoUserId(),
+						custom_claims: {
+							global_name: "Demo User",
+						},
+						name: "Demo User",
+						avatar_url: "/anonImg.jpg",
+					},
+				},
+			},
+		};
+
+		setUser(demoUser);
+	};
+
+	const getLoggedUser = async () => {
+		const user = await supabase.auth.getUser();
+		console.log(user);
+		if (user && user?.data?.user) setUser(user);
+	};
 
 	// Authenticate user and save token to local storage
 	useEffect(() => {
+		getLoggedUser();
 		const { data } = supabase.auth.onAuthStateChange((event, session) => {
 			// User is signed in
 			if (session) {
@@ -99,14 +136,15 @@ const App = () => {
 	return (
 		<main
 			onMouseLeave={() => setPageExits((prev) => prev + 1)}
-			className="flex justify-center bg-gradient-to-br from-[#e0c3fc] to-[#8ec5fc] min-h-dvh">
-			<div className="lg:max-w-[1280px]">
+			className="flex flex-col items-center bg-gradient-to-br from-[#e0c3fc] to-[#8ec5fc] h-dvh overflow-y-auto scrollbar-thin scrollbar-thumb-[#3184ED] scrollbar-thumb-rounded-full">
+			<div className="h-fit lg:max-w-[1280px] centerDiv">
 				{/* Start scene */}
 				{scene === "start" && (
 					// <div>Under Construction!</div>
 					<WhoStart
 						setScene={setScene}
 						user={user}
+						generateDemoUser={generateDemoUser}
 						handleLogout={handleLogout}
 						auth={{ authData, authLoading, authIsError }}
 					/>
@@ -145,6 +183,7 @@ const App = () => {
 					/>
 				)}*/}
 			</div>
+			<Footer />
 		</main>
 	);
 };

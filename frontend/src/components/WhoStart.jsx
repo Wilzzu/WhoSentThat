@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import heroImg from "../assets/WhoHero.png";
 // import useGetScoreboard from "../hooks/useGetScoreboard";
 import HeroMessageCard from "./HeroMessageCard";
@@ -62,6 +62,7 @@ const WhoStart = (props) => {
 						<WhoStartButton
 							user={props.user}
 							auth={props.auth}
+							generateDemoUser={props.generateDemoUser}
 							startGame={startGame}
 							handleLogout={props.handleLogout}
 						/>

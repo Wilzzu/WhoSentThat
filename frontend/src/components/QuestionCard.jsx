@@ -65,7 +65,7 @@ const QuestionCard = forwardRef((props, ref) => {
 				onAnimationComplete={() => props.calculateHeight()}
 				ref={ref}
 				className={
-					"w-full lg:w-1/2 bg-gradient-to-t bg-blackishLight via-transparent to-transparent rounded-xl overflow-hidden py-6 lg:py-12 pr-1 lg:pr-8 pl-6 lg:pl-14 " +
+					"w-full lg:w-[640px] bg-gradient-to-t bg-blackishLight via-transparent to-transparent rounded-xl overflow-hidden py-6 lg:py-12 pr-1 lg:pr-8 pl-6 lg:pl-14 " +
 					(props.highlight.length === 1
 						? colors.correct
 						: props.highlight.length === 2
@@ -98,7 +98,7 @@ const QuestionCard = forwardRef((props, ref) => {
 								? "?????"
 								: props.choices.find((e) => e.id === props.question?.author.id).nickname}
 						</h1>
-						<div className="max-h-[100px] w-full pr-3 overflow-y-auto break-words scrollNormal scrollbar scrollbar-thumb-whiteish scrollbar-thumb-rounded-full scrollbar-w-2">
+						<div className="max-h-[100px] w-full pr-3 overflow-y-auto break-words scrollNormal scrollbar scrollbar-thumb-whiteish scrollbar-thumb-rounded-full scrollbar-w-1">
 							{/* Text field */}
 							<div className="text-lg lg:text-2xl font-hanken text-white text-left">
 								<Linkify componentDecorator={componentDecorator}>
