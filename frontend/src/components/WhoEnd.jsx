@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import usePostScore from "../../hooks/who/usePostScore";
+import usePostScore from "../hooks/usePostScore";
 import WhoLeaderboard from "./WhoLeaderboard";
-import useGetScoreboard from "../../hooks/who/useGetScoreboard";
-import useGetUser from "../../hooks/useGetUser";
+import useGetScoreboard from "../hooks/useGetScoreboard";
+import useGetUser from "../hooks/useGetUser";
 import WhoScoreCard from "./WhoScoreCard";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -14,9 +14,11 @@ const WhoEnd = (props) => {
 
 	// Scoreboard data fetching and posting
 	const { scoreboardData, scoreboardIsLoading, scoreboardIsError } = useGetScoreboard();
+	//TODO: This probably needs to be changed to comply with the new user data
 	const { postData, postLoading, postIsError } = usePostScore(
 		props.user.id,
 		props.user.discord.name,
+		props.user.avatar,
 		props.finalScore,
 		props.correctAnswers,
 		props.highestStreak,
