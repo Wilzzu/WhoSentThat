@@ -1,23 +1,19 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import WhoStart from "./components/WhoStart";
-// import WhoPlaying from "./components/WhoPlaying";
-// import WhoEnd from "./components/WhoEnd";
-// import useGetQuestion from "./hooks/useGetQuestion";
-// import useWhoAuth from "./hooks/useWhoAuth";
-import supabase from "./utils/supabase";
 import { useQueryClient } from "react-query";
+import { v4 as uuid } from "uuid";
+import supabase from "./utils/supabase";
+import WhoStart from "./components/WhoStart";
+import WhoPlaying from "./components/WhoPlaying";
 import useLocalStorage from "./hooks/useLocalStorage";
 import useAuthenticate from "./hooks/useAuthenticate";
 import useGetQuestion from "./hooks/useGetQuestion";
-import WhoPlaying from "./components/WhoPlaying";
-import "./App.css";
+import WhoEnd from "./components/WhoEnd";
 import Footer from "./components/Footer";
-import { v4 as uuid } from "uuid";
+import "./App.css";
 
 const App = () => {
 	// Setting user's session token used for questions
-	// const [token, setToken] = useState(null);
 	const queryClient = useQueryClient();
 	const { getItem, setItem, removeItem } = useLocalStorage();
 	const [token, setToken] = useState(getItem("WST", "token"));
@@ -169,11 +165,11 @@ const App = () => {
 					/>
 				)}
 				{/* End scene */}
-				{/*{scene === "end" && (
+				{scene === "end" && (
 					<WhoEnd
 						setScene={setScene}
 						finalScore={finalScore}
-						user={user}
+						user={user?.data?.user?.user_metadata}
 						reset={nextQuestion}
 						correctAnswers={correctAnswers}
 						highestStreak={highestStreak}
@@ -181,7 +177,7 @@ const App = () => {
 						startTime={startTime}
 						pageExits={pageExits}
 					/>
-				)}*/}
+				)}
 			</div>
 			<Footer />
 		</main>

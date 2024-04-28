@@ -9,6 +9,7 @@ const connectDB = require("./utils/mongoose");
 const getAuthenticate = require("./controllers/getAuthenticate");
 const getQuestion = require("./controllers/getQuestion");
 const getScoreboard = require("./controllers/getScoreboard");
+const setScore = require("./controllers/setScore");
 
 const app = express();
 connectDB();
@@ -33,6 +34,6 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/api/authenticate", getAuthenticate);
 app.get("/api/new", getQuestion);
 app.get("/api/scoreboard", getScoreboard);
-// app.post("/api/addScore", setWhoScore);
+app.post("/api/addScore", setScore);
 
 app.listen(port, () => console.log(`Server started on port ${port}`.yellow));

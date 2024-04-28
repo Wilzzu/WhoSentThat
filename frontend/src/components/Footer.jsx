@@ -43,7 +43,9 @@ const Footer = () => {
 						If you are logged in, your Discord token will be saved to local storage to make future
 						requests. The token is used to check if you are part of the correct Discord server. This
 						token is never sent to our servers and will only exist on your machine until you log
-						off.
+						off. If you rather play as a demo user, we will generate a random ID for you on the
+						first session and save it to local storage. This ID is used to put you on the
+						leaderboard and change your score if you get beat your previous highscore.
 					</p>
 					<h3>How to manage local storage</h3>
 					<p>

@@ -1,8 +1,13 @@
 {
-	"heroMessagesSafe": ["Safe message 1", "Safe message 2", "Safe message 3"],
+	"heroMessagesSafe": [
+		"Anyone up for a game of CS?",
+		"Aww look how cute my cat is 🥺",
+		"Can't wait for the weekend!",
+		"I'm on my way, see you soon!",
+		"Who's up for a movie night?"
+	],
 	"heroMessagesShowOnlyForGroupMembers": [
-		"Group member message 1",
-		"Group member message 2",
-		"Group member message 3"
+		"Only group members can see this message!",
+		"This is a secret message!"
 	]
 }

@@ -82,7 +82,7 @@ const WhoStartButton = (props) => {
 						</button>
 					</div>
 				)}
-				<p className="font-hanken font-medium text-whiteish bg-blackish rounded-lg py-1 px-2 bg-opacity-80 mt-2 text-shadow-normal shadow-[#0000004b]">
+				<p className="font-hanken font-medium text-whiteish text-xs lg:text-base bg-blackish rounded-lg py-1 px-2 bg-opacity-80 mt-2 text-shadow-normal shadow-[#0000004b]">
 					Only group members could play normally,
 					<br />
 					but this is a demo, so anyone can test it out!

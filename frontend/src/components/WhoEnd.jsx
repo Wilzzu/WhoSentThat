@@ -1,8 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import usePostScore from "../hooks/usePostScore";
 import WhoLeaderboard from "./WhoLeaderboard";
 import useGetScoreboard from "../hooks/useGetScoreboard";
-import useGetUser from "../hooks/useGetUser";
 import WhoScoreCard from "./WhoScoreCard";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -16,9 +16,9 @@ const WhoEnd = (props) => {
 	const { scoreboardData, scoreboardIsLoading, scoreboardIsError } = useGetScoreboard();
 	//TODO: This probably needs to be changed to comply with the new user data
 	const { postData, postLoading, postIsError } = usePostScore(
-		props.user.id,
-		props.user.discord.name,
-		props.user.avatar,
+		props?.user?.provider_id,
+		props?.user?.custom_claims?.global_name || props?.user?.name,
+		props?.user?.avatar_url,
 		props.finalScore,
 		props.correctAnswers,
 		props.highestStreak,
@@ -26,8 +26,6 @@ const WhoEnd = (props) => {
 		props.questionTimes,
 		props.pageExits
 	);
-
-	const { userData, userIsLoading, userIsError } = useGetUser(props.user.id);
 
 	// Do end animation and restart game
 	const restartGame = () => {
@@ -41,23 +39,17 @@ const WhoEnd = (props) => {
 
 	// If new/better score is added, filter scoreboard, remove players score if higher, put it to last, then put it to the correct pos
 	useEffect(() => {
-		if (
-			!postData ||
-			!scoreboardData ||
-			scoreboardIsLoading ||
-			!userData ||
-			userIsLoading ||
-			!showScoreboard
-		)
+		if (!postData || !scoreboardData || scoreboardIsLoading || !props?.user || !showScoreboard)
 			return;
 		// 200 new score, 201 no previous score, 202 Highscore
 		if (postData === 200 || postData === 201 || postData === 202) {
 			let filteredLeaderboard = scoreboardData.filter((e) => {
-				return e.id !== props.user.id;
+				return e.id !== props.user.provider_id;
 			});
 			filteredLeaderboard.push({
-				user: userData,
-				id: props.user.id,
+				id: props.user.provider_id,
+				name: props?.user?.custom_claims?.global_name || props?.user?.name,
+				avatar: props?.user?.avatar_url,
 				score: props.finalScore,
 				newScore: true,
 			});
@@ -66,15 +58,17 @@ const WhoEnd = (props) => {
 			setNewScoreAnimate(postData);
 			setTimeout(() => sortLeaderboard(), 550);
 		} else setNewLeaderboard(scoreboardData);
-	}, [postData, scoreboardData, userData, showScoreboard]);
+	}, [postData, scoreboardData, props?.user, showScoreboard]);
+
+	console.log(props?.user);
 
 	return (
 		<AnimatePresence mode="wait" onExitComplete={() => props.setScene("playing")}>
 			{!hideElements && (
-				<div className="flex flex-col gap-6 py-4 items-center min-h-dvh justify-center overflow-hidden">
+				<div className="flex flex-col gap-6 py-4 items-center min-h-dvh justify-center overflow-hidden w-full lg:min-w-[1024px] xl:min-w-[1280px]">
 					{/* Score card */}
 					<motion.div
-						className="w-full h-full flex items-center justify-center"
+						className="w-full h-full flex items-center justify-center sm:min-w-[500px]"
 						initial={{ y: -20, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						exit={{
@@ -89,9 +83,7 @@ const WhoEnd = (props) => {
 						}}
 						transition={{ type: "tween", duration: 0.6, ease: "easeOut" }}>
 						<WhoScoreCard
-							user={userData}
-							loading={userIsLoading}
-							error={userIsError}
+							user={props?.user}
 							score={props.finalScore}
 							postData={postData}
 							correctAnswers={props.correctAnswers}

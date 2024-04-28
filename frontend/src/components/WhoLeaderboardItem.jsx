@@ -35,16 +35,16 @@ const WhoLeaderboardItem = (props) => {
 				{/* Position */}
 				<p className="w-6 lg:w-9">{props.pos + 1}.</p>
 				{/* Avatar */}
-				{props.data.user?.avatar && (
+				{props.data.avatar && (
 					<img
-						className="h-9 lg:h-10 rounded-full opacity-80"
-						src={props.data.user?.avatar}
-						alt={props.data.user?.nickname + "'s Avatar"}
+						className="h-9 lg:h-10 w-9 lg:w-10 aspect-square rounded-full opacity-90"
+						src={props.data.avatar}
+						alt={props.data.name + "'s Avatar"}
 					/>
 				)}
 				{/* Name */}
-				{props.data.user?.nickname ? (
-					<p className="line-clamp-1 text-left">{props.data.user?.nickname}</p>
+				{props.data.name ? (
+					<p className="line-clamp-1 text-left">{props.data.name}</p>
 				) : (
 					<p className="text-red-400 font-semibold text-base">Player could not be loaded</p>
 				)}

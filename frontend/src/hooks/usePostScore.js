@@ -1,13 +1,24 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery } from "react-query";
 import axios from "axios";
 import CryptoJS from "crypto-js";
 
-const usePostScore = (id, name, score, correct, highestStreak, time, timePerQ, pageExits) => {
+const usePostScore = (
+	id,
+	name,
+	avatar,
+	score,
+	correct,
+	highestStreak,
+	time,
+	timePerQ,
+	pageExits
+) => {
 	// Encrypt user score
 	const encryptedScore = CryptoJS.AES.encrypt(
 		JSON.stringify({
 			id,
 			name,
+			avatar,
 			score,
 			correct,
 			highestStreak,

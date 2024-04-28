@@ -15,15 +15,13 @@ const WhoScoreCard = (props) => {
 					y: { duration: 0.5 },
 					opacity: { duration: 1 },
 				}}>
-				{props.postData === 200 || props.postData === 201 || props.postData === 202 ? (
-					<p className="font-poppins text-[#fafcff] font-bold text-xl lg:text-2xl text-shadow-normal shadow-[#7889bd]">
-						NEW RECORD!
-					</p>
-				) : (
-					<p className="font-hanken text-blue-500 font-bold tracking-wide text-xl lg:text-2xl text-shadow-normal shadow-[#d8e3ff]">
-						Results:
-					</p>
-				)}
+				{props.postData === 200 ||
+					props.postData === 201 ||
+					(props.postData === 202 && (
+						<p className="font-poppins text-[#fafcff] font-bold text-xl lg:text-2xl text-shadow-normal shadow-[#7889bd]">
+							NEW RECORD!
+						</p>
+					))}
 			</motion.div>
 			{/* Confetti */}
 			<span id="reward" />
@@ -46,15 +44,15 @@ const WhoScoreCard = (props) => {
 										Loading...
 									</p>
 								</>
-							) : props.user ? (
+							) : props?.user ? (
 								<>
 									<img
 										className="rounded-full max-h-12 lg:max-h-20"
-										src={props.user.avatar}
+										src={props?.user?.avatar_url}
 										alt=""
 									/>
 									<p className="text-blue-500 font-poppins text-2xl lg:text-3xl font-bold text-left py-1 line-clamp-1">
-										{props.user.nickname}
+										{props?.user?.custom_claims?.global_name || props?.user?.name}
 									</p>
 								</>
 							) : (

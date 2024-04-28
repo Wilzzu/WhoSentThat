@@ -1,20 +1,21 @@
 import { useState } from "react";
 import heroImg from "../assets/WhoHero.png";
-// import useGetScoreboard from "../hooks/useGetScoreboard";
 import HeroMessageCard from "./HeroMessageCard";
-// import WhoLeaderboard from "./WhoLeaderboard";
 import WhoStartButton from "./WhoStartButton";
 import { AnimatePresence, motion } from "framer-motion";
+import WhoLeaderboard from "./WhoLeaderboard";
+import useGetScoreboard from "../hooks/useGetScoreboard";
+import { useEffect } from "react";
 
 const WhoStart = (props) => {
-	// const { scoreboardData, scoreboardIsLoading, scoreboardIsError } = useGetScoreboard();
-	// const [leaderboard, setLeaderboard] = useState(null);
+	const { scoreboardData, scoreboardIsLoading, scoreboardIsError } = useGetScoreboard();
+	const [leaderboard, setLeaderboard] = useState(null);
 	const [hideElements, setHideElements] = useState(false);
 
-	// useEffect(() => {
-	// 	if (!scoreboardData) return;
-	// 	setLeaderboard([...scoreboardData].sort((a, b) => b.score - a.score));
-	// }, [scoreboardData]);
+	useEffect(() => {
+		if (!scoreboardData) return;
+		setLeaderboard([...scoreboardData].sort((a, b) => b.score - a.score));
+	}, [scoreboardData]);
 
 	const startGame = () => {
 		setHideElements(true);
@@ -58,7 +59,7 @@ const WhoStart = (props) => {
 							},
 						}}
 						transition={{ type: "tween", duration: 0.6, ease: "easeInOut" }}
-						className="flex flex-col items-center">
+						className="flex flex-col items-center h-56">
 						<WhoStartButton
 							user={props.user}
 							auth={props.auth}
@@ -73,7 +74,7 @@ const WhoStart = (props) => {
 						animate={{ y: 0, opacity: 0.3 }}
 						exit={{ y: 20, opacity: 0 }}
 						transition={{ type: "tween", duration: 0.2, ease: "easeInOut" }}
-						className="bg-whiteish h-1 w-9/12 lg:w-3/5 rounded-full mt-16"
+						className="bg-whiteish h-1 w-9/12 lg:w-5/6 rounded-full"
 					/>
 
 					<div className="w-full flex justify-center h-[28rem] mb-10 lg:mb-16">
@@ -82,16 +83,16 @@ const WhoStart = (props) => {
 							animate={{ y: 0, opacity: 1 }}
 							exit={{ y: 80, opacity: 0, transition: { delay: 0, ease: "easeIn" } }}
 							transition={{ type: "tween", duration: 0.6, ease: "easeOut", delay: 0.1 }}
-							className="flex flex-col h-fit max-h-[28rem] overflow-hidden items-center gap-2 bg-gradient-to-br from-[#3589f7] to-[#84bdff] w-11/12 lg:w-1/2 p-4 rounded-xl shadow-2xl shadow-blue-400">
+							className="flex flex-col h-fit max-h-[28rem] overflow-hidden items-center gap-2 bg-gradient-to-br from-[#3589f7] to-[#84bdff] w-11/12 lg:w-3/4 p-4 rounded-xl shadow-2xl shadow-blue-400">
 							<h1 className="font-poppins text-lg lg:text-2xl font-bold text-whiteish text-left text-shadow-lg shadow-[#9b99ff]">
 								Leaderboard
 							</h1>
-							{/* <WhoLeaderboard
+							<WhoLeaderboard
 								data={leaderboard}
 								loading={scoreboardIsLoading}
 								error={scoreboardIsError}
 								showScoreboard={true}
-							/> */}
+							/>
 						</motion.div>
 					</div>
 				</div>
