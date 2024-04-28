@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { Modal } from "react-responsive-modal";
 import "react-responsive-modal/styles.css";
 
 const Footer = () => {
 	const [open, setOpen] = useState(false);
+	const ref = useRef(null);
+
+	useLayoutEffect(() => {
+		if (open) {
+			setTimeout(() => {
+				if (ref.current) ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+			}, 100);
+		}
+	}, [open]);
 
 	return (
 		<footer>
@@ -14,13 +23,17 @@ const Footer = () => {
 
 				<li>
 					<button onClick={() => setOpen(true)}>
-						<span className="underline text-whiteish text-shadow-sm shadow-[#00000073]">
+						<span className="underline text-whiteish text-shadow-sm shadow-[#00000073] hover:no-underline">
 							Privacy Policy
 						</span>
 					</button>
 				</li>
 			</ul>
-			<Modal open={open} onClose={() => setOpen(false)} classNames={{ modal: "customModal" }}>
+			<Modal
+				open={open}
+				ref={ref}
+				onClose={() => setOpen(false)}
+				classNames={{ modal: "customModal" }}>
 				<span className="gdpr font-poppins text-blackish">
 					<h1>Cookie and Privacy Policy</h1>
 					<br />
@@ -40,12 +53,11 @@ const Footer = () => {
 					</p>
 					<h3>How we use local storage</h3>
 					<p>
-						If you are logged in, your Discord token will be saved to local storage to make future
-						requests. The token is used to check if you are part of the correct Discord server. This
-						token is never sent to our servers and will only exist on your machine until you log
-						off. If you rather play as a demo user, we will generate a random ID for you on the
-						first session and save it to local storage. This ID is used to put you on the
-						leaderboard and change your score if you get beat your previous highscore.
+						If you are logged in, your Discord token will be encrypted and saved to local storage to
+						make future requests. The token is used to check if you are part of the correct Discord
+						server. This token will only exist on your machine until you log off. If you rather play
+						as a demo user, we will generate a random ID for you on the first session and save it to
+						local storage. This ID is used to update your position on the leaderboard.
 					</p>
 					<h3>How to manage local storage</h3>
 					<p>

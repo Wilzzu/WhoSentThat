@@ -15,13 +15,17 @@ const WhoScoreCard = (props) => {
 					y: { duration: 0.5 },
 					opacity: { duration: 1 },
 				}}>
-				{props.postData === 200 ||
-					props.postData === 201 ||
-					(props.postData === 202 && (
-						<p className="font-poppins text-[#fafcff] font-bold text-xl lg:text-2xl text-shadow-normal shadow-[#7889bd]">
-							NEW RECORD!
+				{props.postData === 202 ? (
+					<p className="font-poppins text-[#fafcff] font-bold text-xl lg:text-2xl text-shadow-normal shadow-[#7889bd]">
+						NEW RECORD!
+					</p>
+				) : (
+					(props.postData === 200 || props.postData === 201) && (
+						<p className="font-hanken text-blue-500 font-bold tracking-wide text-xl lg:text-2xl text-shadow-normal shadow-[#d8e3ff]">
+							New personal best!
 						</p>
-					))}
+					)
+				)}
 			</motion.div>
 			{/* Confetti */}
 			<span id="reward" />

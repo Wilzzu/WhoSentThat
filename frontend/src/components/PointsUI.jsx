@@ -20,7 +20,7 @@ const PointsUI = forwardRef((props, ref) => {
 	}));
 
 	return (
-		<div className="flex items-center justify-center">
+		<div className="flex items-center justify-center relative">
 			{/* Points container */}
 			<div className="h-full duration-300 bg-gradient-to-br from-[#0F2027] to-[#1a2d33] rounded-xl flex items-center justify-center gap-2 shadow-md select-none px-1 lg:px-8">
 				<h1 className="min-w-[74px] lg:min-w-[106px] font-poppins text-white text-shadow-lg shadow-[#9292929d] text-[0] lg:text-base">
