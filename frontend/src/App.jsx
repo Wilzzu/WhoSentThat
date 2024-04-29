@@ -11,6 +11,7 @@ import useGetQuestion from "./hooks/useGetQuestion";
 import WhoEnd from "./components/WhoEnd";
 import Footer from "./components/Footer";
 import "./App.css";
+import GDPRPopup from "./components/GDPRPopup";
 
 const App = () => {
 	// Setting user's session token used for questions
@@ -179,6 +180,7 @@ const App = () => {
 					/>
 				)}
 			</div>
+			<GDPRPopup />
 			<Footer />
 		</main>
 	);

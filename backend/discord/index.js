@@ -104,11 +104,11 @@ const createHighscoreEmbed = async (user, score, correct, highStreak, time, time
 		.setTitle(`${findUser?.nickname} set a new highscore!`)
 		.setDescription(
 			`# Pisteet: ${score}\n` +
-				"```prolog\nCorrect   Streak    Time    Time Per Question\n" +
-				`${formatText(correct, 6)}   ${formatText(highStreak, 6)}${formatText(
+				"```prolog\nCorrect   Streak    Time    Time/Question\n" +
+				`${formatText(correct, 7)}   ${formatText(highStreak, 6)}${formatText(
 					finalTime,
-					12
-				)}${formatText(finalAvg, 12)} ` +
+					13
+				)}${formatText(finalAvg, 13)} ` +
 				"\n```\n" +
 				`<t:${unix}:R>`
 		)
