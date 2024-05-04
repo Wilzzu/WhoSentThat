@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import WhoLeaderboardItem from "./WhoLeaderboardItem";
 import LoadingSpinner from "../assets/LoadingSpinner";
 import { useReward } from "react-rewards";
-import { motion } from "framer-motion";
 
 const WhoLeaderboard = (props) => {
 	const [initialized, setInitialized] = useState(false);
@@ -110,7 +109,7 @@ const WhoLeaderboard = (props) => {
 					<LoadingSpinner color={"white"} />
 				</div>
 			) : props.data ? (
-				<motion.div layout layoutRoot className="p-1 lg:p-2 pr-2 lg:pr-4 flex flex-col gap-2">
+				<div className="p-1 lg:p-2 pr-2 lg:pr-4 flex flex-col gap-2">
 					{props.data &&
 						props.data.map((e, i) => {
 							return (
@@ -122,7 +121,7 @@ const WhoLeaderboard = (props) => {
 								/>
 							);
 						})}
-				</motion.div>
+				</div>
 			) : (
 				<div className="p-2 flex flex-col gap-2 items-center font-hanken text-whiteish text-lg opacity-50">
 					<p>Loading leaderboard...</p>

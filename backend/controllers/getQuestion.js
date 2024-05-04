@@ -133,25 +133,22 @@ const questionObject = async (data, res) => {
 	let tries = 0;
 
 	// Keep picking a random message until it checks all the boxes
-	// For the demo purposes we skip this check, since the chat logs are limited
-	if (!config?.isDemo) {
-		while (
-			(randomMessage.message.author.isBot ||
-				((randomMessage.message.content.length < 25 ||
-					randomMessage.message.content.split(" ").length <= 2) &&
-					!randomMessage.message.embeds.length &&
-					!randomMessage.message.attachments.length) ||
-				(!randomMessage.prevMsgs[0].content.length &&
-					!randomMessage.prevMsgs[0].embeds.length &&
-					!randomMessage.prevMsgs[0].attachments.length) ||
-				(!randomMessage.prevMsgs[1].content.length &&
-					!randomMessage.prevMsgs[1].embeds.length &&
-					!randomMessage.prevMsgs[1].attachments.length)) &&
-			tries < 100
-		) {
-			randomMessage = pickRandomMessage(data);
-			tries++;
-		}
+	while (
+		(randomMessage.message.author.isBot ||
+			((randomMessage.message.content.length < (config?.isDemo ? 1 : 25) ||
+				randomMessage.message.content.split(" ").length <= 2) &&
+				!randomMessage.message.embeds.length &&
+				!randomMessage.message.attachments.length) ||
+			(!randomMessage.prevMsgs[0].content.length &&
+				!randomMessage.prevMsgs[0].embeds.length &&
+				!randomMessage.prevMsgs[0].attachments.length) ||
+			(!randomMessage.prevMsgs[1].content.length &&
+				!randomMessage.prevMsgs[1].embeds.length &&
+				!randomMessage.prevMsgs[1].attachments.length)) &&
+		tries < 100
+	) {
+		randomMessage = pickRandomMessage(data);
+		tries++;
 	}
 
 	const message = randomMessage.message,
