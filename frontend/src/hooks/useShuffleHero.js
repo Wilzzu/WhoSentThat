@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { heroMessagesSafe, heroMessagesShowOnlyForGroupMembers } from "../../config.json";
+import { heroMessagesSafe, heroMessagesShowOnlyForGroupMembers } from "../configs/config.json";
 
 const useShuffleHero = (auth) => {
 	const [messages, setMessages] = useState(null);

@@ -2,6 +2,7 @@ import LoadingSpinner from "../assets/LoadingSpinner";
 import useLocalStorage from "../hooks/useLocalStorage";
 import LoginButton from "./login/LoginButton";
 import anonImg from "../assets/anonImg.jpg";
+import config from "../configs/config.json";
 
 const WhoStartButton = (props) => {
 	const { getItem } = useLocalStorage();
@@ -17,14 +18,18 @@ const WhoStartButton = (props) => {
 		return (
 			<>
 				<LoginButton />
-				<p className="font-hanken font-medium text-whiteish text-shadow-normal shadow-[#3a3a3a81] mt-2 z-10">
-					or
-				</p>
-				<button
-					className="font-hanken text-whiteish text-shadow-normal shadow-[#3a3a3a81] underline cursor-pointer font-normal"
-					onClick={startAsDemoUser}>
-					Play as a demo user
-				</button>
+				{config?.isDemo && (
+					<>
+						<p className="font-hanken font-medium text-whiteish text-shadow-normal shadow-[#3a3a3a81] mt-2 z-10">
+							or
+						</p>
+						<button
+							className="font-hanken text-whiteish text-shadow-normal shadow-[#3a3a3a81] underline cursor-pointer font-normal"
+							onClick={startAsDemoUser}>
+							Play as a demo user
+						</button>
+					</>
+				)}
 			</>
 		);
 	}
@@ -53,13 +58,21 @@ const WhoStartButton = (props) => {
 	) {
 		return (
 			<>
-				<button
-					className="flex items-center justify-center bg-gradient-to-br bg-[#2F80ED] to-transparent from-[#56CCF2] w-48 lg:w-60 h-[4.25rem] lg:h-20 rounded-2xl duration-150 shadow-[12px_12px_38px_#1567ffa1,-12px_-12px_38px_#ffffff8c] hover:bg-[#b12fed] hover:scale-[1.04] hover:shadow-[12px_12px_38px_#b12fedaf,-12px_-12px_38px_#ffffff8c]"
-					onClick={() => props.startGame()}>
-					<p className="text-whiteish font-poppins text-3xl lg:text-4xl font-bold text-shadow-lg shadow-[#0000005b] select-none">
-						Play
-					</p>
-				</button>
+				{config?.isDemo ? (
+					<button
+						className="flex items-center justify-center bg-gradient-to-br bg-[#2F80ED] to-transparent from-[#56CCF2] w-48 lg:w-60 h-[4.25rem] lg:h-20 rounded-2xl duration-150 shadow-[12px_12px_38px_#1567ffa1,-12px_-12px_38px_#ffffff8c] hover:bg-[#b12fed] hover:scale-[1.04] hover:shadow-[12px_12px_38px_#b12fedaf,-12px_-12px_38px_#ffffff8c]"
+						onClick={() => props.startGame()}>
+						<p className="text-whiteish font-poppins text-3xl lg:text-4xl font-bold text-shadow-lg shadow-[#0000005b] select-none">
+							Play
+						</p>
+					</button>
+				) : (
+					<div className="bg-gradient-to-br bg-[#313131] to-transparent from-[#5c5c5c] opacity-30 w-48 lg:w-60 h-[4.25rem] lg:h-20 rounded-2xl duration-150 flex items-center justify-center">
+						<p className="text-whiteish font-poppins text-3xl lg:text-4xl font-bold text-shadow-lg shadow-[#0000005b] select-none">
+							Play
+						</p>
+					</div>
+				)}
 				{/* Logged user data */}
 				{props.user?.data?.user && (
 					<div className="flex items-center justify-between gap-2 mt-2 min-w-48 lg:min-w-60 p-1 bg-[#2F80ED40] rounded-md">
@@ -82,11 +95,17 @@ const WhoStartButton = (props) => {
 						</button>
 					</div>
 				)}
-				<p className="font-hanken font-medium text-whiteish text-xs lg:text-base bg-blackish rounded-lg py-1 px-2 bg-opacity-80 mt-2 text-shadow-normal shadow-[#0000004b]">
-					Only group members could play normally,
-					<br />
-					but this is a demo, so anyone can test it out!
-				</p>
+				{config?.isDemo ? (
+					<p className="font-hanken font-medium text-whiteish text-xs lg:text-base bg-blackish rounded-lg py-1 px-2 bg-opacity-80 mt-2 text-shadow-normal shadow-[#0000004b]">
+						Only group members could normally play,
+						<br />
+						but this is a demo, so anyone can test it out!
+					</p>
+				) : (
+					<p className="font-hanken font-medium text-whiteish text-xs lg:text-base bg-red-500 rounded-lg py-1 px-2 bg-opacity-80 mt-2 text-shadow-normal shadow-[#0000004b]">
+						Only group members can play, sorry!
+					</p>
+				)}
 			</>
 		);
 	}

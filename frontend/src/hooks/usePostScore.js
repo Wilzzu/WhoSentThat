@@ -11,7 +11,8 @@ const usePostScore = (
 	highestStreak,
 	time,
 	timePerQ,
-	pageExits
+	pageExits,
+	auth = null
 ) => {
 	// Encrypt user score
 	const encryptedScore = CryptoJS.AES.encrypt(
@@ -35,7 +36,13 @@ const usePostScore = (
 		isError: postIsError,
 	} = useQuery(["whoPost"], async () => {
 		return axios
-			.post(`${import.meta.env.VITE_API_URL}/api/addScore`, { score: encryptedScore })
+			.post(
+				`${import.meta.env.VITE_API_URL}/api/addScore`,
+				{ score: encryptedScore },
+				{
+					headers: { Authorization: `Bearer ${auth}` },
+				}
+			)
 			.then((res) => {
 				return res.status;
 			})

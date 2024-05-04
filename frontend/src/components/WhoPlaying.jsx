@@ -40,7 +40,7 @@ const WhoPlaying = (props) => {
 	const pointsRef = useRef(null);
 
 	// DEV
-	const devPoints = useRef(null);
+	// const devPoints = useRef(null);
 
 	/////////////////////////////////////////////////////////////////////////////
 	/* GAME STATES */
@@ -63,6 +63,7 @@ const WhoPlaying = (props) => {
 		props.setPageExits(0);
 		if (!props.data) props.refetchQuestion();
 		setTimeout(() => setShowFirstLoading(true), 4000);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	// When new data is fetched show new question, AKA start new round

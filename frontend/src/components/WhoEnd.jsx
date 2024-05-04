@@ -5,12 +5,14 @@ import WhoLeaderboard from "./WhoLeaderboard";
 import useGetScoreboard from "../hooks/useGetScoreboard";
 import WhoScoreCard from "./WhoScoreCard";
 import { AnimatePresence, motion } from "framer-motion";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 const WhoEnd = (props) => {
 	const [newLeaderboard, setNewLeaderboard] = useState(null); //null
 	const [newScoreAnimate, setNewScoreAnimate] = useState(0);
 	const [hideElements, setHideElements] = useState(false);
 	const [showScoreboard, setShowScoreboard] = useState(false);
+	const { getItem } = useLocalStorage();
 
 	// Scoreboard data fetching and posting
 	const { scoreboardData, scoreboardIsLoading, scoreboardIsError } = useGetScoreboard();
@@ -24,7 +26,8 @@ const WhoEnd = (props) => {
 		props.highestStreak,
 		Date.now() - props.startTime,
 		props.questionTimes,
-		props.pageExits
+		props.pageExits,
+		getItem("WST", "token")
 	);
 
 	// Do end animation and restart game
@@ -59,8 +62,6 @@ const WhoEnd = (props) => {
 			setTimeout(() => sortLeaderboard(), 550);
 		} else setNewLeaderboard(scoreboardData);
 	}, [postData, scoreboardData, props?.user, showScoreboard]);
-
-	console.log(props?.user);
 
 	return (
 		<AnimatePresence mode="wait" onExitComplete={() => props.setScene("playing")}>

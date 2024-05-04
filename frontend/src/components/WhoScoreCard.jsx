@@ -21,7 +21,7 @@ const WhoScoreCard = (props) => {
 					</p>
 				) : (
 					(props.postData === 200 || props.postData === 201) && (
-						<p className="font-hanken text-blue-500 font-bold tracking-wide text-xl lg:text-2xl text-shadow-normal shadow-[#d8e3ff]">
+						<p className="font-poppins text-[#fafcff] font-bold text-xl lg:text-2xl text-shadow-normal shadow-[#7889bd]">
 							New personal best!
 						</p>
 					)

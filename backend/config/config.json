@@ -13,5 +13,6 @@
 			"divideGeneralMessagesBy": 2
 		},
 		"rarity": { "general": 50, "rare": 40 }
-	}
+	},
+	"isDemo": true
 }

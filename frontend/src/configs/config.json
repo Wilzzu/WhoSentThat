@@ -9,5 +9,6 @@
 	"heroMessagesShowOnlyForGroupMembers": [
 		"Only group members can see this message!",
 		"This is a secret message!"
-	]
+	],
+	"isDemo": true
 }

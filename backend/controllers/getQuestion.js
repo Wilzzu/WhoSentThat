@@ -5,12 +5,58 @@ const dotenv = require("dotenv").config();
 const CryptoJS = require("crypto-js");
 const config = require("../config/config.json");
 const demoMembers = require("../config/demoMembers.json");
-// const { dcGetMembers, dcSendHighscore } = require("../discord");
+const { dcGetMembers, dcSendHighscore } = require("../discord");
+const { default: axios } = require("axios");
+
+const alreadyAuthorizedUsers = [];
 
 // @desc    Get new question
 // @route   GET /api/new
 const getQuestion = asyncHandler(async (req, res) => {
 	console.log("GET /api/new", new Date().toLocaleString());
+	const accessToken = req?.headers?.authorization?.split(" ")[1];
+
+	// Check if user is part of the Discord group
+	if (!config?.isDemo) {
+		let isAlreadyAuthorized = alreadyAuthorizedUsers.find((user) => user.token === accessToken);
+
+		// Remove token from authorized users if it's older than 1 hour
+		if (
+			isAlreadyAuthorized &&
+			new Date().getTime() - isAlreadyAuthorized.timestamp > 1000 * 60 * 60
+		) {
+			alreadyAuthorizedUsers.splice(alreadyAuthorizedUsers.indexOf(isAlreadyAuthorized), 1);
+			isAlreadyAuthorized = null;
+		}
+
+		if (!isAlreadyAuthorized) {
+			// Get user guilds
+			const userGuilds = await axios
+				.get("https://discord.com/api/users/@me/guilds", {
+					headers: {
+						Authorization: `Bearer ${accessToken}`,
+					},
+				})
+				.then((res) => res.data)
+				.catch((err) => {
+					return null;
+				});
+			// Check if any guilds were found
+			if (userGuilds === null || userGuilds === "error") {
+				return res.status(404).json({ error: "Error fetching guilds" });
+			}
+			if (!userGuilds)
+				return res.status(200).json({ error: "User is not part of the Discord group" });
+
+			// Check if user is on the correct guild
+			const isMember = userGuilds.some((guild) => guild.id === process.env.GUILD_ID);
+			if (!isMember)
+				return res.status(200).json({ error: "User is not part of the Discord group" });
+
+			alreadyAuthorizedUsers.push({ token: accessToken, timestamp: new Date().getTime() });
+		}
+	}
+
 	let files = [];
 	let seed = Math.floor(Math.random() * 100);
 
@@ -63,7 +109,12 @@ const randomizeRare = (choices, members, rareType) => {
 			choices.push(rare);
 		} else {
 			console.log("Didnt find rare id: " + rareType[randomize]);
-			i = i - 1;
+			choices.push({
+				id: rareType[randomize],
+				nickname: "Unknown",
+				avatar: "https://cdn.discordapp.com/embed/avatars/0.png",
+				uuid: randomUUID(),
+			});
 		}
 	}
 };
@@ -79,33 +130,36 @@ const pickRandomMessage = (data) => {
 
 const questionObject = async (data, res) => {
 	let randomMessage = pickRandomMessage(data);
+	let tries = 0;
 
 	// Keep picking a random message until it checks all the boxes
-	// For the demo purposes we skip this check
-	// while (
-	// 	randomMessage.message.author.isBot ||
-	// 	((randomMessage.message.content.length < 25 ||
-	// 		randomMessage.message.content.split(" ").length <= 2) &&
-	// 		!randomMessage.message.embeds.length &&
-	// 		!randomMessage.message.attachments.length) ||
-	// 	(!randomMessage.prevMsgs[0].content.length &&
-	// 		!randomMessage.prevMsgs[0].embeds.length &&
-	// 		!randomMessage.prevMsgs[0].attachments.length) ||
-	// 	(!randomMessage.prevMsgs[1].content.length &&
-	// 		!randomMessage.prevMsgs[1].embeds.length &&
-	// 		!randomMessage.prevMsgs[1].attachments.length)
-	// ) {
-	// 	randomMessage = pickRandomMessage(data);
-	// }
+	// For the demo purposes we skip this check, since the chat logs are limited
+	if (!config?.isDemo) {
+		while (
+			(randomMessage.message.author.isBot ||
+				((randomMessage.message.content.length < 25 ||
+					randomMessage.message.content.split(" ").length <= 2) &&
+					!randomMessage.message.embeds.length &&
+					!randomMessage.message.attachments.length) ||
+				(!randomMessage.prevMsgs[0].content.length &&
+					!randomMessage.prevMsgs[0].embeds.length &&
+					!randomMessage.prevMsgs[0].attachments.length) ||
+				(!randomMessage.prevMsgs[1].content.length &&
+					!randomMessage.prevMsgs[1].embeds.length &&
+					!randomMessage.prevMsgs[1].attachments.length)) &&
+			tries < 100
+		) {
+			randomMessage = pickRandomMessage(data);
+			tries++;
+		}
+	}
 
 	const message = randomMessage.message,
 		prevMsgs = randomMessage.prevMsgs;
 
 	// Normally we would fetch the lates member name and icon so that it cannot be guessed by the old name or icon
-	// const members = await dcGetMembers();
-
 	// For the demo purposes we will just use the values in the chat logs since they don't have real Discord member data
-	const members = demoMembers;
+	const members = config?.isDemo ? demoMembers : await dcGetMembers();
 
 	// Select who should be shown as choices, 3 normal chatters, 1 rare
 	const choices = [];
@@ -138,12 +192,17 @@ const questionObject = async (data, res) => {
 				choices.push(random);
 			} else {
 				console.log("Didnt find ID: " + tempNormal[randomChatter]);
-				i = i - 1;
+				choices.push({
+					id: tempNormal[randomChatter],
+					nickname: "Unknown",
+					avatar: "https://cdn.discordapp.com/embed/avatars/0.png",
+					uuid: randomUUID(),
+				});
 			}
 			tempNormal.splice(randomChatter, 1);
 		}
 	}
-	// // If correct is normal, add 1 rare 12% (25% chance for super rare instead) of the time and 2 normal ones
+	// If correct is normal, add 1 rare 12% (25% chance for super rare instead) of the time and 2 normal ones
 	else {
 		let normalAmount = 3;
 		let randomRare = Math.random();
@@ -161,7 +220,12 @@ const questionObject = async (data, res) => {
 				choices.push(random);
 			} else {
 				console.log("Didnt find: " + tempNormalFiltered[randomChatter]);
-				i = i - 1;
+				choices.push({
+					id: tempNormalFiltered[randomChatter],
+					nickname: "Unknown",
+					avatar: "https://cdn.discordapp.com/embed/avatars/0.png",
+					uuid: randomUUID(),
+				});
 			}
 			tempNormalFiltered.splice(randomChatter, 1);
 		}
