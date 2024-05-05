@@ -98,7 +98,7 @@ const QuestionCard = forwardRef((props, ref) => {
 								? "?????"
 								: props.choices.find((e) => e.id === props.question?.author.id).nickname}
 						</h1>
-						<div className="max-h-[100px] w-full pr-3 overflow-y-auto break-words scrollNormal scrollbar scrollbar-thumb-whiteish scrollbar-thumb-rounded-full scrollbar-w-1">
+						<div className="max-h-[100px] w-full pr-3 overflow-y-auto break-words scrollNormal scrollbar-thin scrollbar-w-1 lg:scrollbar-w-2 scrollbar-thumb-whiteish scrollbar-thumb-rounded-full">
 							{/* Text field */}
 							<div className="text-lg lg:text-2xl font-hanken text-white text-left">
 								<Linkify componentDecorator={componentDecorator}>

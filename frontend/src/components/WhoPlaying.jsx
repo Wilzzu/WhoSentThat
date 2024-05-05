@@ -187,7 +187,7 @@ const WhoPlaying = (props) => {
 	return (
 		<AnimatePresence mode="wait" onExitComplete={() => props.setScene("end")}>
 			{!endGame && (
-				<div className="min-h-[100dvh] w-full overflow-x-hidden flex flex-col justify-center pb-20 lg:pt-2">
+				<div className="min-h-[100dvh] w-full overflow-hidden flex flex-col justify-center pb-20 lg:pt-2">
 					{/* Question header */}
 					<motion.div
 						initial={{ y: 20, opacity: 0 }}
@@ -219,7 +219,7 @@ const WhoPlaying = (props) => {
 							(showPreviousMsgs && " [overflow:overlay] ") +
 							(!showPrevScroll && showPreviousMsgs && " scrollbar-none ") +
 							(showPrevScroll &&
-								" scrollNormal scrollbar scrollbar-thumb-[#3184ED] scrollbar-thumb-rounded-full scrollbar-w-2")
+								" scrollNormal scrollbar-thin scrollbar-w-1 lg:scrollbar-w-2 scrollbar-thumb-[#3184ED] scrollbar-thumb-rounded-full")
 						}>
 						<AnimatePresence>
 							{showPreviousMsgs &&
