@@ -133,8 +133,8 @@ const App = () => {
 	return (
 		<main
 			onMouseLeave={() => setPageExits((prev) => prev + 1)}
-			className="flex flex-col items-center bg-gradient-to-br from-[#e0c3fc] to-[#8ec5fc] h-dvh overflow-y-auto scrollbar-thin scrollbar-thumb-[#3184ED] scrollbar-thumb-rounded-full">
-			<div className="h-fit lg:max-w-[1280px] centerDiv">
+			className="flex flex-col items-center bg-gradient-to-br from-[#e0c3fc] to-[#8ec5fc] h-dvh overflow-y-auto scrollbar scrollbar-w-1 lg:scrollbar-w-2 scrollbar-thumb-[#3184ED] scrollbar-thumb-rounded-full">
+			<div className="h-fit w-full lg:w-auto lg:max-w-[1280px] centerDiv">
 				{/* Start scene */}
 				{scene === "start" && (
 					// <div>Under Construction!</div>

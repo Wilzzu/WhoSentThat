@@ -187,7 +187,7 @@ const WhoPlaying = (props) => {
 	return (
 		<AnimatePresence mode="wait" onExitComplete={() => props.setScene("end")}>
 			{!endGame && (
-				<div className="min-h-[100dvh] flex flex-col justify-center pb-20 lg:pt-2">
+				<div className="min-h-[100dvh] w-full overflow-x-hidden flex flex-col justify-center pb-20 lg:pt-2">
 					{/* Question header */}
 					<motion.div
 						initial={{ y: 20, opacity: 0 }}
