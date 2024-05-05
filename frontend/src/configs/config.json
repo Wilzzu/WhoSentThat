@@ -1,15 +1,16 @@
 {
 	"heroMessagesSafe": [
 		"Anyone up for a game of CS?",
-		"Just found some diamonds! 💎",
+		"Look I found some diamonds! 💎",
 		"Can't wait for the weekend!",
 		"I'm on my way, see you soon!",
 		"Who's up for a movie night?",
 		"Guys look at this haha 😂",
-		"Wow this is so cool! 😎",
+		"Wow this is so cool! 😮",
 		"Aww look at this cute cat 🥺",
 		"Oh no, I'm late for work!",
-		"Just finished my workout 💪"
+		"Done with my workout 💪",
+		"Just chilling 🤠"
 	],
 	"heroMessagesShowOnlyForGroupMembers": [
 		"Only group members can see this message!",
