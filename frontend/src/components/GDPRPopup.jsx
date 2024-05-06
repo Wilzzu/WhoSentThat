@@ -27,7 +27,7 @@ const GDPRPopup = () => {
 					className="absolute p-4 pb-2 lg:pb-4 2xl:p-6 gap-4 flex bottom-6 lg:bottom-10 lg:left-10 bg-blue-500 rounded-md 2xl:rounded-xl text-white drop-shadow-lg z-50 pointer-events-auto">
 					<div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
 						<p className="drop-shadow-text text-left">
-							This site uses local storage to save your preferences. We also use trusted external{" "}
+							This site uses local storage to enable various features. We also use trusted external{" "}
 							<br className="hidden lg:inline-block" />
 							providers who utilize cookies for secure login functionality and website protection.
 						</p>
