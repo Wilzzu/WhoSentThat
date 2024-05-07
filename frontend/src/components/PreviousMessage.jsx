@@ -51,7 +51,7 @@ const PreviousMessage = forwardRef((props, ref) => {
 				maxHeight: { type: "tween", duration: 0.6 },
 			}}
 			className={
-				"w-full lg:w-1/2 pl-4 lg:pl-14 bg-blackishLight rounded-xl py-4 pr-2 lg:pr-8 " +
+				"w-full lg:w-[640px] pl-4 lg:pl-14 bg-blackishLight rounded-xl py-4 pr-2 lg:pr-8 " +
 				(props.count ? "bg-opacity-[0.90]" : "bg-opacity-[0.85]")
 			}>
 			{/* Main question */}
