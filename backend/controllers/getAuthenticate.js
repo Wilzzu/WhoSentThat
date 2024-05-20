@@ -4,7 +4,6 @@ const asyncHandler = require("express-async-handler");
 // @desc    Check if user is part of the Discord group
 // @route   GET /api/authenticate
 const getAuthenticate = asyncHandler(async (req, res) => {
-	console.log("GET /api/authenticate", new Date().toLocaleString());
 	const accessToken = req.headers.authorization?.split(" ")[1];
 
 	// Get user guilds

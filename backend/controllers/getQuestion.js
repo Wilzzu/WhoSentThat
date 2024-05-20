@@ -13,7 +13,6 @@ const alreadyAuthorizedUsers = [];
 // @desc    Get new question
 // @route   GET /api/new
 const getQuestion = asyncHandler(async (req, res) => {
-	console.log("GET /api/new", new Date().toLocaleString());
 	const accessToken = req?.headers?.authorization?.split(" ")[1];
 
 	// Check if user is part of the Discord group
@@ -65,7 +64,6 @@ const getQuestion = asyncHandler(async (req, res) => {
 		if (seed < config.messages.rarity.general / config.messages.files.divideGeneralMessagesBy) {
 			// 1 - number of old chat logs, here we have 2, so the range is from 1 to 2
 			for (i = 1; i <= config.messages.files.oldAmount; i++) files.push("general" + i);
-			console.log("general files old", files);
 		} else {
 			// Start this range from whatever the next number of chat logs would be, here it's 3, and end it at the last number of files
 			// eg. If you have 3 old chat logs and 4 new chat logs, this range would be from 4 to 7
@@ -75,27 +73,21 @@ const getQuestion = asyncHandler(async (req, res) => {
 				i++
 			)
 				files.push("general" + i);
-			console.log("general files new", files);
 		}
 	} else if (
 		seed > config.messages.rarity.general &&
 		seed <= config.messages.rarity.rare + config.messages.rarity.general
 	) {
 		files = config.messages.files.rare;
-		console.log("rare file", files);
 	}
 	if (seed > config.messages.rarity.rare + config.messages.rarity.general) {
 		files = config.messages.files.superRare;
-		console.log("super rare file", files);
 	}
 
 	const chosenFile = files[Math.floor(Math.random() * files.length)];
 	// Read selected file and return question object
 	fs.readFile(`../backend/database/${chosenFile}.json`, "utf8", (err, data) => {
-		if (err) {
-			console.log(err);
-			res.status(404);
-		}
+		if (err) res.status(404);
 		questionObject(JSON.parse(data), res);
 	});
 });
@@ -108,7 +100,6 @@ const randomizeRare = (choices, members, rareType) => {
 			rare.uuid = randomUUID();
 			choices.push(rare);
 		} else {
-			console.log("Didnt find rare id: " + rareType[randomize]);
 			choices.push({
 				id: rareType[randomize],
 				nickname: "Unknown",
@@ -168,7 +159,6 @@ const questionObject = async (data, res) => {
 		correctMember.uuid = randomUUID();
 		choices.push(correctMember);
 	} else {
-		console.log("Member not found: ", message.author);
 		message.author.uuid = randomUUID();
 		message.author.avatar = "https://cdn.discordapp.com/embed/avatars/0.png";
 		choices.push(message.author);
@@ -188,7 +178,6 @@ const questionObject = async (data, res) => {
 				random.uuid = randomUUID();
 				choices.push(random);
 			} else {
-				console.log("Didnt find ID: " + tempNormal[randomChatter]);
 				choices.push({
 					id: tempNormal[randomChatter],
 					nickname: "Unknown",
@@ -216,7 +205,6 @@ const questionObject = async (data, res) => {
 				random.uuid = randomUUID();
 				choices.push(random);
 			} else {
-				console.log("Didnt find: " + tempNormalFiltered[randomChatter]);
 				choices.push({
 					id: tempNormalFiltered[randomChatter],
 					nickname: "Unknown",

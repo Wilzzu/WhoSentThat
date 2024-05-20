@@ -36,6 +36,7 @@ const WhoStartButton = (props) => {
 
 	// If error occurred while checking user's group membership
 	if (props.auth?.authIsError) {
+		props.handleLogout(); // Since we aren't refreshing the token, we need to log out the user. TODO: This can be implemented later.
 		return (
 			<>
 				<div className="bg-gradient-to-br bg-[#313131] to-transparent from-[#5c5c5c] opacity-30 w-48 lg:w-60 h-[4.25rem] lg:h-20 rounded-2xl duration-150 flex items-center justify-center">

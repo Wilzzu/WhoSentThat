@@ -46,7 +46,7 @@ const WhoStart = (props) => {
 						</div>
 					</motion.div>
 
-					{/* Start btn */}
+					{/* Start button */}
 					<motion.div
 						animate={{ y: 0, opacity: 1 }}
 						exit={{

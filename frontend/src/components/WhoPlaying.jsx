@@ -74,7 +74,6 @@ const WhoPlaying = (props) => {
 		setDisable(false);
 		setHighlightIds([]);
 		setQuestionStartTime(Date.now());
-		// console.log(props.data[0]?.question.author.name); // Remove for final version
 	}, [props.data]);
 
 	// End current round

@@ -46,7 +46,6 @@ const setScore = asyncHandler(async (req, res) => {
 		// RESPONSE
 		if (updatedScore === null) {
 			// The user had no previous score
-			console.log("New score added:", updatedScore?.name, score);
 			// New highscore
 			if (score > maxValue) {
 				dcSendHighscore(id, score, correct, highestStreak, time, timePerQ);
@@ -55,12 +54,9 @@ const setScore = asyncHandler(async (req, res) => {
 		} else {
 			if (oldScore >= score) {
 				// The score was not updated because the new score is not higher than the previous score
-				console.log("Score not updated:", updatedScore?.name, score);
 				res.status(204).json(updatedScore);
 			} else {
 				// The score was updated successfully
-				console.log("Score updated:", updatedScore?.name, score);
-
 				// New highscore
 				if (score > maxValue) {
 					dcSendHighscore(id, score, correct, highestStreak, time, timePerQ);
@@ -69,7 +65,6 @@ const setScore = asyncHandler(async (req, res) => {
 			}
 		}
 	} catch (error) {
-		console.log(error);
 		res.status(500).json({ message: "Error updating score" });
 	}
 });

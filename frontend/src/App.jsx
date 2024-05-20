@@ -51,7 +51,6 @@ const App = () => {
 
 	const getLoggedUser = async () => {
 		const user = await supabase.auth.getUser();
-		console.log(user);
 		if (user && user?.data?.user) setUser(user);
 	};
 
@@ -65,18 +64,15 @@ const App = () => {
 				if (session.provider_token) {
 					setItem("WST", "token", session.provider_token);
 					setToken(session.provider_token);
-					console.log("Signed in");
 				}
 			}
 			// No user is signed in
 			else {
-				console.log("No session");
 				removeItem("WST", "token");
 				setToken(null);
 			}
 			// When user signs out, clear all data
 			if (event === "SIGNED_OUT") {
-				console.log("Signed out");
 				removeItem("WST", "token");
 				setToken(null);
 				queryClient.removeQueries();
@@ -137,7 +133,6 @@ const App = () => {
 			<div className="h-fit w-full lg:w-auto lg:max-w-[1280px] centerDiv">
 				{/* Start scene */}
 				{scene === "start" && (
-					// <div>Under Construction!</div>
 					<WhoStart
 						setScene={setScene}
 						user={user}

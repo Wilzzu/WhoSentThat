@@ -35,7 +35,6 @@ const addBtn = (label, url, emoji) => {
 const dcGetMembers = async (force = false) => {
 	// If last update was under 24 hours ago, return old data
 	if (!shouldUpdate() && !force) {
-		console.log("Latest member update was under 24 hours ago, serving old data".yellow);
 		return membersData;
 	}
 
@@ -57,7 +56,6 @@ const dcGetMembers = async (force = false) => {
 				allMembers.push(user);
 			}
 		});
-		console.log(`Updated members list with ${allMembers.length} members`.green);
 		membersData = allMembers;
 		return allMembers;
 	} catch (error) {
@@ -118,7 +116,6 @@ const createHighscoreEmbed = async (user, score, correct, highStreak, time, time
 };
 
 const dcSendHighscore = async (user, score, correct, highStreak, time, timePerQ) => {
-	console.log(user, score, correct, highStreak, time, timePerQ);
 	client.channels.cache.get(process.env.CHANNEL_ID).send({
 		embeds: [await createHighscoreEmbed(user, score, correct, highStreak, time, timePerQ)],
 		components: [addBtn("Leaderboard", process.env.WEBSITE_URL, "🥇")],
