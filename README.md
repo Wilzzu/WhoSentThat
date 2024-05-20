@@ -1,3 +1,5 @@
+![Banner](https://i.imgur.com/QeFlmx5.png)
+
 <h1 align="center">Who sent that?</h1>
 
 <p align="center">Discord chat guessing game, where you have to guess who sent the message.</br>Includes a live leaderboard and Discord notifications.</p>
@@ -11,13 +13,13 @@ You can play the demo version here: [whosentthat.wilzzu.dev](https://whosentthat
 
 - A randomly chosen chat log is shown each round
 - Choose from 4 different chatters
-- Different rarities for chat logs and chatters
-- Message filtering
-- Support for attachments and links
 - Streaks and bonuses
 - Statistics for each run
+- Support for attachments and links
 - Live leaderboard
 - Discord notifications
+- Different rarities for chat logs and chatters
+- Message filtering
 - User authentication
 - Responsive design
 
@@ -31,7 +33,7 @@ You can play the demo version here: [whosentthat.wilzzu.dev](https://whosentthat
 ## Important Notices
 
 > [!WARNING]
-> Due to a policy change made by Discord in November 2023, attachment URLs now expire after 24 hours and can't be shown in the game.
+> Due to a policy change made by Discord in November 2023, attachment URLs now expire after 24 hours and won't show up in the game.
 
 > [!CAUTION]
 > This project was originally created only for our friend group's private Discord server, it shouldn't be used in large public servers. You need to gather and host the chat logs and the database yourself, and make sure that data is stored securely. Both the frontend and backend use multiple points of authentication to ensure any user that gets access to the data is authorized to do so, but you should still take measures to ensure the data is stored securely on your end. Here's a reminder of the GDPR requirements you should follow to use this project in your server:
@@ -65,7 +67,7 @@ To run the project locally:
    ```
 
 3. **Configuration:**
-   Before starting the development server, ensure that the environment variables and config files are correctly configured. Refer to the [Configuration](#configuration) section for detailed instructions.
+   Before starting the development server, ensure that the environment variables and config files are correctly configured. See the [Configuration](#configuration) section for more information.
 
 4. **Run the application:**
 
@@ -117,17 +119,17 @@ There are config files for both the frontend and backend. The config files are l
 
 **Frontend `config.json` file:**
 
-| Variable                              | Description                                                                                                         |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `heroMessagesSafe`                    | Array of messages that are shown to everyone in the login page hero section.                                        |
-| `heroMessagesShowOnlyForGroupMembers` | Array of messages that are shown only to group members in the login page hero section.                              |
-| `isDemo`                              | Set to `true` to allow everyone to access the game without authentication. Set to `false` to enable authentication. |
+| Variable                              | Description                                                                                                       |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `heroMessagesSafe`                    | Array of messages that are shown to everyone in the home page hero section.                                       |
+| `heroMessagesShowOnlyForGroupMembers` | Array of messages that are shown only to group members in the home page hero section.                             |
+| `isDemo`                              | Set to `true` to allow anyone to access the game without authentication. Set to `false` to enable authentication. |
 
 **Backend `config.json` file:**
 
 | Variable                                 | Description                                                                                                                                                                                                                                                                                                                             |
 | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `chatters`                               | Arrays of Discord IDs for chatters that appear in choices. The choices are randomly selected from these arrays based on rarity.                                                                                                                                                                                                         |
+| `chatters`                               | Arrays of Discord IDs for chatters that appear in the choices. Choices are randomly selected from these arrays based on their rarity.                                                                                                                                                                                                   |
 | `messages.files.<rarity>`                | Arrays of file names in their respective rarities. The game will pick a random files based on their rarity. General files are automatically added, so you don't need to specify them.                                                                                                                                                   |
 | `messages.files.oldAmount`               | Number specifying the amount of old general chat log files.                                                                                                                                                                                                                                                                             |
 | `messages.files.newAmount`               | Number specifying the amount of new general chat log files.                                                                                                                                                                                                                                                                             |
@@ -137,7 +139,12 @@ There are config files for both the frontend and backend. The config files are l
 
 ### Database Files
 
-Chat log files should be structured and have at least the following fields:
+Add your chat log files to the `backend/database` directory. For general chat logs, name the files `general1.json`, `general2.json`, etc. For other categories, you can name the files as you wish, but make sure to specify the names in the `backend/config/config.json` file.
+
+> [!IMPORTANT]
+> Each chat log file should be under 15 MB in size.
+
+Chat log files should have at least the following fields and be structured as follows:
 
 ```json
 {
@@ -169,14 +176,14 @@ Chat log files should be structured and have at least the following fields:
 
 ### Public Endpoints
 
-- `GET /api/scoreboard` - Retrieve the leaderboard.
+- `GET /api/scoreboard` - Retrieve current live leaderboard.
 
 ### Protected Endpoints
 
 These endpoints require authentication.
 
 - `GET /api/authenticate` - Authenticate the user.
-- `GET /api/new` - Get a new chat log.
+- `GET /api/new` - Get a new chat log message.
 - `POST /api/addScore` - Add a new score to the leaderboard.
 
 ## License
