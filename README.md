@@ -7,7 +7,7 @@
 ## Demo Site
 
 This is a demo version of the game, the chat logs are randomly generated and not real. There is a cheat button for testing out streaks and bonuses.
-You can play the demo version here: [whosentthat.wilzzu.dev](https://whosentthat.wilzzu.dev/).
+You can play the demo version here: [whosentthat.wilzzu.dev](https://whosentthat.wilzzu.dev/)
 
 ## Features
 
@@ -115,7 +115,7 @@ Rename the `.env.example` files in both `backend` and `frontend` directories to 
 
 ### Config Files
 
-There are config files for both the frontend and backend. The config files are located in `frontend/src/configs` and `backend/config`, respectively.
+There are config files for both the frontend and backend. The config files are located in `frontend/src/configs` and `backend/config` directories, respectively.
 
 **Frontend `config.json` file:**
 
@@ -127,22 +127,22 @@ There are config files for both the frontend and backend. The config files are l
 
 **Backend `config.json` file:**
 
-| Variable                                 | Description                                                                                                                                                                                                                                                                                                                             |
-| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `chatters`                               | Arrays of Discord IDs for chatters that appear in the choices. Choices are randomly selected from these arrays based on their rarity.                                                                                                                                                                                                   |
-| `messages.files.<rarity>`                | Arrays of file names in their respective rarities. The game will pick a random files based on their rarity. General files are automatically added, so you don't need to specify them.                                                                                                                                                   |
-| `messages.files.oldAmount`               | Number specifying the amount of old general chat log files.                                                                                                                                                                                                                                                                             |
-| `messages.files.newAmount`               | Number specifying the amount of new general chat log files.                                                                                                                                                                                                                                                                             |
-| `messages.files.divideGeneralMessagesBy` | Number determining how often old general chat log files are selected compared to new ones. For example, setting it to `4` gives a 25% chance `(1 in 4)` for old files and 75% chance for new files to be selected. Set this to `2` `(1 in 2)` for an equal chance of old and new files.                                                 |
-| `messages.rarity`                        | Number specifying how often different chat logs are picked. The number is converted to percentage, so if you set general to `50` and rare to `30`, then there's a 50% chance for general, 30% chance for rare and 20% chance for super rare chat log file. Super rare chance is calculated automatically, you don't need to specify it. |
-| `isDemo`                                 | Set to `true` by default, which will disable some features, such as user authentication. **If you are going to use this game in your server, make sure this is set to `false` to enable all the important features.**                                                                                                                   |
+| Variable                                 | Description                                                                                                                                                                                                                                                                                                                                    |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `chatters.<rarity>`                      | Arrays of Discord IDs for chatters that appear in the choices. Choices are randomly selected from these arrays based on their rarity.                                                                                                                                                                                                          |
+| `messages.files.<rarity>`                | Arrays of chat log file names in their respective rarities. The game will pick random chat log files based on their rarity. General chat log files are automatically added, you don't need to specify them.                                                                                                                                    |
+| `messages.files.oldAmount`               | Number specifying the amount of old general chat log files.                                                                                                                                                                                                                                                                                    |
+| `messages.files.newAmount`               | Number specifying the amount of new general chat log files.                                                                                                                                                                                                                                                                                    |
+| `messages.files.divideGeneralMessagesBy` | Number determining how often old general chat log files are selected compared to new ones. For example, setting this to `4` gives a 25% chance `(1 in 4)` for old files and 75% chance for new files to be selected. Set this to `2` `(1 in 2)` for an equal chance of old and new files.                                                      |
+| `messages.rarity`                        | Number specifying how often different chat logs are picked. The number is converted to a percentage, so if you set `general` to `50` and `rare` to `30`, then there's a 50% chance for general, 30% chance for rare and 20% chance for super rare chat log files. Super rare chance is calculated automatically, you don't need to specify it. |
+| `isDemo`                                 | Set to `true` by default, which will disable some features, such as user authentication. **If you are going to use this game in your server, make sure this is set to `false` to enable all the important features.**                                                                                                                          |
 
 ### Database Files
 
-Add your chat log files to the `backend/database` directory. For general chat logs, name the files `general1.json`, `general2.json`, etc. For other categories, you can name the files as you wish, but make sure to specify the names in the `backend/config/config.json` file.
+Add your chat log files to the `backend/database` directory. For general chat logs, name the files from oldest to newest as `general1.json`, `general2.json`, etc. For other categories, you can name the files as you wish, but make sure to specify them in the `backend/config/config.json` file.
 
 > [!IMPORTANT]
-> Each chat log file should be under 15 MB in size.
+> Each chat log file should be **under 15 MB** in size.
 
 Chat log files should have at least the following fields and be structured as follows:
 
@@ -166,7 +166,7 @@ Chat log files should have at least the following fields and be structured as fo
       ],
       "embeds": []
     }
-    ...
+    // ...
   ],
   "messageCount": <Amount of messages in the file>
 }
@@ -176,15 +176,15 @@ Chat log files should have at least the following fields and be structured as fo
 
 ### Public Endpoints
 
-- `GET /api/scoreboard` - Retrieve current live leaderboard.
+- `GET /api/scoreboard` - Retrieve current live scoreboard.
 
 ### Protected Endpoints
 
 These endpoints require authentication.
 
 - `GET /api/authenticate` - Authenticate the user.
-- `GET /api/new` - Get a new chat log message.
-- `POST /api/addScore` - Add a new score to the leaderboard.
+- `GET /api/new` - Retrieve a new chat log message.
+- `POST /api/addScore` - Add a new score to the scoreboard.
 
 ## License
 
