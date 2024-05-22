@@ -9,6 +9,8 @@
 This is a demo version of the game, the chat logs are randomly generated and not real. There is a cheat button for testing out streaks and bonuses.
 You can play the demo version here: [whosentthat.wilzzu.dev](https://whosentthat.wilzzu.dev/)
 
+![Screenshots](https://i.imgur.com/CZfCzDy.png)
+
 ## Features
 
 - A randomly chosen chat log is shown each round
