@@ -101,17 +101,16 @@ Rename the `.env.example` files in both `backend` and `frontend` directories to 
 
 **Backend `.env` file:**
 
-| Variable           | Description                                                                                            |
-| ------------------ | ------------------------------------------------------------------------------------------------------ |
-| `PORT`             | The port where the backend server will run, e.g., `3000`.                                              |
-| `DC_TOKEN`         | Bot token found in `Bot` > `Token` in your Discord Developer Portal application.                       |
-| `CHANNEL_ID`       | Discord channel ID where the bot will send high score notifications.                                   |
-| `GUILD_ID`         | ID of the Discord server.                                                                              |
-| `MONGODB_USERNAME` | MongoDB database username found in `Database Access` section of your project.                          |
-| `MONGODB_PASSWORD` | MongoDB database password found in `Database Access` section of your project.                          |
-| `WEBSITE_URL`      | The URL where your frontend is hosted, e.g., `https://whosentthat.wilzzu.dev/`.                        |
-| `CRYPTOPASS`       | A random string used for encryption. Should be the same in both the frontend and backend `.env` files. |
-| `CRYPTOWORD`       | A random string used for encryption. Should be the same in both the frontend and backend `.env` files. |
+| Variable      | Description                                                                                            |
+| ------------- | ------------------------------------------------------------------------------------------------------ |
+| `PORT`        | The port where the backend server will run, e.g., `3000`.                                              |
+| `DC_TOKEN`    | Bot token found in `Bot` > `Token` in your Discord Developer Portal application.                       |
+| `CHANNEL_ID`  | Discord channel ID where the bot will send high score notifications.                                   |
+| `GUILD_ID`    | ID of the Discord server.                                                                              |
+| `MONGODB_URI` | MongoDB connection URI found in `Database` > `Connect` > `Drivers` in your MongoDB Atlas project.      |
+| `WEBSITE_URL` | The URL where your frontend is hosted, e.g., `https://whosentthat.wilzzu.dev/`.                        |
+| `CRYPTOPASS`  | A random string used for encryption. Should be the same in both the frontend and backend `.env` files. |
+| `CRYPTOWORD`  | A random string used for encryption. Should be the same in both the frontend and backend `.env` files. |
 
 ### Config Files
 
