@@ -94,8 +94,6 @@ Rename the `.env.example` files in both `backend` and `frontend` directories to 
 | Variable                 | Description                                                                                            |
 | ------------------------ | ------------------------------------------------------------------------------------------------------ |
 | `VITE_API_URL`           | The URL where your backend API is hosted, e.g., `http://localhost:3000`.                               |
-| `VITE_SUPABASE_USER`     | The username for your Supabase project.                                                                |
-| `VITE_SUPABASE_PASS`     | The password for your Supabase project.                                                                |
 | `VITE_SUPABASE_URL`      | URL found in `Project Settings` > `API` > `Project URL` in your Supabase project.                      |
 | `VITE_SUPABASE_ANON_KEY` | Anon key found in `Project Settings` > `API` > `Project API keys` in your Supabase project.            |
 | `VITE_CRYPTOPASS`        | A random string used for encryption. Should be the same in both the frontend and backend `.env` files. |
@@ -168,9 +166,9 @@ Chat log files should have at least the following fields and be structured as fo
       ],
       "embeds": []
     }
-    // ...
+    ...
   ],
-  "messageCount": <Amount of messages in the file>
+  "messageCount": <Number of messages in the file>
 }
 ```
 
