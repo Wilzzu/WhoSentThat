@@ -9,7 +9,7 @@
 	},
 	"dependencies": {
 		"@supabase/supabase-js": "^2.42.5",
-		"axios": "^1.6.8",
+		"axios": "^1.7.3",
 		"colors": "^1.4.0",
 		"cors": "^2.8.5",
 		"crypto": "^1.0.1",
