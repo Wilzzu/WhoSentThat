@@ -5,7 +5,7 @@
 
 version: 2
 updates:
- - package-ecosystem: "npm" # Update npm packages
+  - package-ecosystem: "npm" # Update npm packages
     directory: "/frontend" # Location of the first package manifest
     schedule:
       interval: "weekly"
