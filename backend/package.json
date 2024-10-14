@@ -20,6 +20,6 @@
 		"express-async-handler": "^1.2.0",
 		"express-session": "^1.18.0",
 		"mongodb": "^6.9.0",
-		"mongoose": "^8.7.0"
+		"mongoose": "^8.7.1"
 	}
 }
