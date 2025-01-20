@@ -21,7 +21,7 @@
 		"react-medium-image-zoom": "^5.2.13",
 		"react-query": "^3.39.3",
 		"react-responsive-modal": "^6.4.2",
-		"react-rewards": "^2.0.4",
+		"react-rewards": "^2.0.5",
 		"react-type-animation": "^3.2.0",
 		"tailwind-scrollbar": "^3.1.0",
 		"uuid": "^11.0.5"
