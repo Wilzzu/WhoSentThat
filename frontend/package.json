@@ -18,7 +18,7 @@
 		"react-dom": "^19.0.0",
 		"react-icons": "^5.4.0",
 		"react-linkify": "^1.0.0-alpha",
-		"react-medium-image-zoom": "^5.2.13",
+		"react-medium-image-zoom": "^5.2.14",
 		"react-query": "^3.39.3",
 		"react-responsive-modal": "^6.4.2",
 		"react-rewards": "^2.1.0",
