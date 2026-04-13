@@ -8,7 +8,7 @@
 		"start": "node server.js"
 	},
 	"dependencies": {
-		"@supabase/supabase-js": "^2.101.1",
+		"@supabase/supabase-js": "^2.103.0",
 		"axios": "^1.15.0",
 		"colors": "^1.4.0",
 		"cors": "^2.8.6",
