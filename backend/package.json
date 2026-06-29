@@ -19,7 +19,7 @@
 		"express": "^5.2.1",
 		"express-async-handler": "^1.2.0",
 		"express-session": "^1.19.0",
-		"mongodb": "^7.3.0",
+		"mongodb": "^7.4.0",
 		"mongoose": "^9.7.1"
 	}
 }
